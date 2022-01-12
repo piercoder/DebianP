@@ -1,2 +1,2 @@
 # DebianP
-My Debian Customization
+My debian post-installation script
