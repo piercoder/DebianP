@@ -24,7 +24,7 @@ echo ""
 echo "--------------------------------------"
 echo "3 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install xfce4 xfce4-goodies papirus-icon-theme
+sudo apt install xfce4 xfce4-goodies papirus-icon-theme slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
 
 echo ""
 echo "-----------------------------"
