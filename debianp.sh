@@ -35,7 +35,9 @@ echo ""
 echo "-------------------------"
 echo "5- Configuring the system"
 echo "-------------------------"
+#TBD
 # GRUB
 # FLATPAK
 # APPARANCE
 # SHORTCUTS
+
