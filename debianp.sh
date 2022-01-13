@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Start with a debian server installation
-# Only the basic system installation
+# Start with a debian server installation (only the basic system installation)
 
 echo "======================================="
 echo "This will istall DebianP on your system"
@@ -24,13 +23,13 @@ echo ""
 echo "--------------------------------------"
 echo "3 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install xfce4 xfce4-goodies papirus-icon-theme slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
+sudo apt install xfce4 xfce4-goodies papirus-icon-theme slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings -y
 
 echo ""
 echo "-----------------------------"
 echo "4 - Installing extra software"
 echo "-----------------------------"
-sudo apt install firefox-esr command-not-found mc neofetch cmatrix inxi flatpak htop
+sudo apt install firefox-esr command-not-found mc neofetch cmatrix inxi flatpak htop -y
 
 echo ""
 echo "-------------------------"
