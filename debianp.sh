@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start with a debian server installation (only the basic system installation)
+# Start with a debian basic installation
 
 echo "======================================="
 echo "This will istall DebianP on your system"
@@ -39,6 +39,8 @@ echo ""
 echo "-------------------------"
 echo "5- Configuring the system"
 echo "-------------------------"
+mkdir -p ~/bin ~/.wallpapers
+
 #TBD
 # GRUB
 # FLATPAK
