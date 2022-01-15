@@ -18,18 +18,22 @@ echo "-------------------------"
 echo "2 - Upgrading your system"
 echo "-------------------------"
 sudo apt update && sudo apt full-upgrade && sudo apt autoremove
+sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
 
 echo ""
 echo "--------------------------------------"
 echo "3 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install xfce4 xfce4-goodies papirus-icon-theme slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
+sudo apt install xfce4 xfce4-goodies \
+				gnome-themes-extra papirus-icon-theme \
+				slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
 
 echo ""
 echo "-----------------------------"
 echo "4 - Installing extra software"
 echo "-----------------------------"
-sudo apt install firefox-esr command-not-found mc neofetch cmatrix inxi flatpak htop
+sudo apt install firefox-esr geany geany-common synaptic flatpak \
+				command-not-found mc htop neofetch cmatrix
 
 echo ""
 echo "-------------------------"
