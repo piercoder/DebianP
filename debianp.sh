@@ -17,12 +17,12 @@ echo "1 - Upgrading the system"
 echo "------------------------"
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo cp sources.list /etc/apt/sources.list
-echo "<-Sources list updated->"
+echo "< Sources list updated >"
 
 echo ""
 sudo apt update && sudo apt full-upgrade && sudo apt autoremove
 sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
-echo "<-System updated->"
+echo "< System updated >"
 
 echo ""
 echo "--------------------------------------"
@@ -31,7 +31,7 @@ echo "--------------------------------------"
 sudo apt install xfce4 xfce4-goodies \
 				gnome-themes-extra papirus-icon-theme \
 				slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
-echo "<-Desktop environment installed->"
+echo "< Desktop environment installed >"
 
 echo ""
 echo "----------------------------------"
@@ -40,7 +40,7 @@ echo "----------------------------------"
 sudo apt install firefox-esr geany geany-common synaptic flatpak \
 				command-not-found mc htop neofetch cmatrix
 sudo apt update
-echo "<-Additional packages installed->"
+echo "< Additional packages installed >"
 
 echo ""
 echo "-------------------------"
@@ -49,7 +49,7 @@ echo "-------------------------"
 mkdir -p ~/bin ~/.wallpapers
 cp wallpaper.jpg ~/.wallpapers
 echo "TO BE DONE"
-echo "<-System configured->"
+echo "< System configured >"
 #TBD
 # GRUB
 # FLATPAK
