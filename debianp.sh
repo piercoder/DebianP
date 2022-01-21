@@ -54,7 +54,7 @@ echo "-------------------------"
 echo "5- Configuring the system"
 echo "-------------------------"
 mkdir -p ~/bin ~/.wallpapers
-mv wallpaper.jpg ~/.wallpapers
+cp wallpaper.jpg ~/.wallpapers
 echo "System configured"
 #TBD
 # GRUB
