@@ -2,9 +2,16 @@
 
 # Start with a debian basic installation
 
-echo "======================================="
-echo "This will istall DebianP on your system"
-echo "======================================="
+echo' mmmm          #        "                  mmmmm  '
+echo' #   "m  mmm   #mmm   mmm     mmm   m mm   #   "# '
+echo' #    # #"  #  #" "#    #    "   #  #"  #  #mmm#" '
+echo' #    # #""""  #   #    #    m"""#  #   #  #      '
+echo' #mmm"  "#mm"  ##m#"  mm#mm  "mm"#  #   #  #      '
+
+echo ""
+echo "==========================================="
+echo "This is the DebianP postinstallation script"
+echo "==========================================="
 
 echo ""
 echo "--------------------------------"
