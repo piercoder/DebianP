@@ -12,6 +12,7 @@ echo "1 - Changing the repository list"
 echo "--------------------------------"
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo cp sources.list /etc/apt/sources.list
+echo "Repository list updated"
 
 echo ""
 echo "-------------------------"
@@ -19,6 +20,7 @@ echo "2 - Upgrading your system"
 echo "-------------------------"
 sudo apt update && sudo apt full-upgrade && sudo apt autoremove
 sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
+echo "System updated"
 
 echo ""
 echo "--------------------------------------"
@@ -27,13 +29,17 @@ echo "--------------------------------------"
 sudo apt install xfce4 xfce4-goodies \
 				gnome-themes-extra papirus-icon-theme \
 				slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
+echo "Desktop environment installed"
 
 echo ""
-echo "-----------------------------"
-echo "4 - Installing extra software"
-echo "-----------------------------"
+echo "----------------------------------"
+echo "4 - Installing additional packages"
+echo "----------------------------------"
 sudo apt install firefox-esr geany geany-common synaptic flatpak \
 				command-not-found mc htop neofetch cmatrix
+sudo apt update
+echo "Additional packages installed"
+
 
 echo ""
 echo "-------------------------"
@@ -41,6 +47,7 @@ echo "5- Configuring the system"
 echo "-------------------------"
 mkdir -p ~/bin ~/.wallpapers
 mv wallpaper.jpg ~/.wallpapers
+echo "System configured"
 #TBD
 # GRUB
 # FLATPAK
