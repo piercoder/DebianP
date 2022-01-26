@@ -22,6 +22,7 @@ echo "< Sources list updated >"
 echo ""
 sudo apt update && sudo apt full-upgrade && sudo apt autoremove
 sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
+sudo apt autoremove
 echo "< System updated >"
 
 echo ""
