@@ -50,6 +50,11 @@ mkdir -p ~/bin ~/.wallpapers
 cp wallpaper.jpg ~/.wallpapers
 echo "TO BE DONE"
 echo "< System configured >"
+
+echo ""
+echo "< All is done. Reboot your system. >"
+
+
 #TBD
 # GRUB
 # FLATPAK
