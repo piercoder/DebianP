@@ -59,6 +59,7 @@ echo "< All is done. Reboot your system. >"
 #TBD
 # GRUB
 # FLATPAK
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # APPARANCE
 # SHORTCUTS
 
