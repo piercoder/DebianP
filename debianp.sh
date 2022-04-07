@@ -29,17 +29,16 @@ echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install xfce4 xfce4-goodies \
-				gnome-themes-extra papirus-icon-theme \
-				slick-greeter gobject-introspection gir1.2-gtk-3.0 lightdm-settings
+sudo apt install i3 xinit
 echo "< Desktop environment installed >"
 
 echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install firefox-esr geany geany-common synaptic flatpak \
-				command-not-found mc htop neofetch cmatrix
+sudo apt install chromium \
+				geany geany-common \
+				command-not-found neofetch
 sudo apt update
 echo "< Additional packages installed >"
 
@@ -57,9 +56,6 @@ echo "< All is done. Reboot your system. >"
 
 
 #TBD
-# GRUB
-# FLATPAK
-# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # APPARANCE
 # SHORTCUTS
 
