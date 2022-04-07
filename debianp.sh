@@ -36,7 +36,7 @@ echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install chromium kitty \
+sudo apt install chromium kitty man-db\
 				geany geany-common \
 				command-not-found neofetch
 sudo apt update
