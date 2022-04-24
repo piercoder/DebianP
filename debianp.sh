@@ -1,14 +1,21 @@
 #!/bin/bash
 
-# Start with a debian basic installation
+#======================================================================#
+#	 __     ___  __      __   __   __   ___  __  
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
+#	
+#	my debian post installation script                                             
+#======================================================================#
+
+# It's easier to start with a debian XFCE installation
 
 echo ""
 echo '+==================================================+'
-echo '| mmmm          #        "                  mmmmm  |'
-echo '| #   "m  mmm   #mmm   mmm     mmm   m mm   #   "# |'
-echo '| #    # #"  #  #" "#    #    "   #  #"  #  #mmm#" |'
-echo '| #    # #""""  #   #    #    m"""#  #   #  #      |'
-echo '| #mmm"  "#mm"  ##m#"  mm#mm  "mm"#  #   #  #      |'
+echo '|     __   ___  __               __                |' 
+echo '|    |  \ |__  |__) |  /\  |\ | |__)               |' 
+echo '|    |__/ |___ |__) | /~~\ | \| |                  |'
+echo '|                                                  |'
 echo '+==================================================+'
 
 echo ""
@@ -29,33 +36,25 @@ echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install i3 xinit
+sudo apt install i3 feh picom lxappearance kitty
 echo "< Desktop environment installed >"
 
 echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install chromium kitty man-db\
-				geany geany-common \
-				command-not-found neofetch
-sudo apt update
+sudo apt install chromium thunar geany geany-common 
 echo "< Additional packages installed >"
 
 echo ""
 echo "-------------------------"
 echo "4- Configuring the system"
 echo "-------------------------"
-mkdir -p ~/bin ~/.wallpapers
-cp wallpaper.jpg ~/.wallpapers
-echo "TO BE DONE"
+cp -r .wallpapers ~
+cp -r .themes ~
+cp -r .config ~
+cp .bashrc ~
 echo "< System configured >"
 
 echo ""
 echo "< All is done. Reboot your system. >"
-
-
-#TBD
-# APPARANCE
-# SHORTCUTS
-

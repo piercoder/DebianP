@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#======================================================================#
+#	 __     ___  __      __   __   __   ___  __  
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
+#	
+#	show i3 keyboard shortcuts                                             
+#======================================================================#
+
+# Define the file path and name
+FileName=~/.config/i3/config
+
+# Perform several sobsitutions and display the output
+grep 'bindsym $mod' $FileName | sed 's/bindsym //g' | sed -e 's/^[ \t]*//' | less
+
