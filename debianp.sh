@@ -36,14 +36,16 @@ echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install i3 feh picom lxappearance kitty
+sudo apt install i3 feh picom lxappearance kitty gtk-engines-murrine
 echo "< Desktop environment installed >"
 
 echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install chromium thunar geany geany-common 
+sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common wget 
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+sudo apt install ./google-chrome-stable*
 echo "< Additional packages installed >"
 
 echo ""
