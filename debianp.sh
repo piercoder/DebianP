@@ -36,7 +36,7 @@ echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install i3 feh picom lxappearance kitty gtk-engines-murrine
+sudo apt install i3 feh picom kitty fonts-font-awesome lxappearance gtk2-engines-murrine slick-greeter lightdm-settings
 echo "< Desktop environment installed >"
 
 echo ""
