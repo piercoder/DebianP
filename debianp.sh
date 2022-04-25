@@ -1,19 +1,19 @@
 #!/bin/bash
 
 #======================================================================#
-#	 __     ___  __      __   __   __   ___  __  
-#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
-#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
-#	
-#	my debian post installation script                                             
+#    __     ___  __      __   __   __   ___  __
+#   |__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#   |    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#   my debian post installation script
 #======================================================================#
 
 # It's easier to start with a debian XFCE installation
 
 echo ""
 echo '+==================================================+'
-echo '|     __   ___  __               __                |' 
-echo '|    |  \ |__  |__) |  /\  |\ | |__)               |' 
+echo '|     __   ___  __               __                |'
+echo '|    |  \ |__  |__) |  /\  |\ | |__)               |'
 echo '|    |__/ |___ |__) | /~~\ | \| |                  |'
 echo '|                                                  |'
 echo '+==================================================+'
@@ -43,10 +43,10 @@ echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common wget 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common wget
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable*
-git clone 
+git clone
 echo "< Additional packages installed >"
 
 echo ""
@@ -55,13 +55,13 @@ echo "4- Configuring the system"
 echo "-------------------------"
 cp -r .wallpapers ~
 
-mkdir .themes 
+mkdir .themes
 cd .themes
 git clone https://github.com/dracula/gtk
 cd ..
 cp -r .themes ~
 
-mkdir .icons 
+mkdir .icons
 wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
 unzip Dracula.zip -d .icons
 cp -r .icons ~
