@@ -103,16 +103,16 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Keyboard shortcuts to start apps  
 #======================================================================#
 # Terminal
-bindsym $mod+t exec kitty
+bindsym $mod+Return exec kitty
 
 # Browser
-bindsym $mod+b exec google-chrome
+bindsym $mod+c exec google-chrome
 
 # Editor
 bindsym $mod+g exec geany
 
 # File manager
-bindsym $mod+m exec thunar
+bindsym $mod+t exec thunar
 
 # dmenu (program launcher)
 bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$comment' -sf '$foreground' -fn 'FontAwesome-12' -p '▶'"
