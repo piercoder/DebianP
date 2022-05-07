@@ -118,7 +118,10 @@ bindsym $mod+t exec thunar
 bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$comment' -sf '$foreground' -fn 'FontAwesome-12' -p '▶'"
 
 # Keybind help
-bindsym $mod+k exec kitty ~/.config/i3/showkey
+bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
+
+# Keybind help
+bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
 #======================================================================#
 
 
