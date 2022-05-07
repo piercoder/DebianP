@@ -120,7 +120,7 @@ bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$comment
 # Keybind help
 bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
 
-# Keybind help
+# Kill processes
 bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
 #======================================================================#
 
