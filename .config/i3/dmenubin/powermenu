@@ -25,7 +25,7 @@ forealt="#bfbfbf"
 backtransp="#282a36CC"
 
 # Style
-lines="2"
+lines="3"
 font="FontAwesome-12"
 
 # Theme  
@@ -33,10 +33,11 @@ theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -f
 
 # Power-off menu
 
-OPT=$(echo -e "Poweroff\nReboot" | dmenu -i -p "Power menu ▶" $theme )
+OPT=$(echo -e "Logout\nPoweroff\nReboot" | dmenu -i -p "Power menu ▶" $theme )
 
 case $OPT in
+	Logout) i3-msg exit ;;
 	Poweroff) systemctl poweroff ;;
-	Reboot) systemctl reboot     ;;
+	Reboot) systemctl reboot ;;
 	*) ;;
 esac
