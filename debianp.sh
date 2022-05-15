@@ -36,14 +36,14 @@ echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install i3 feh picom kitty fonts-font-awesome lxappearance gtk2-engines-murrine slick-greeter lightdm-settings
+sudo apt install i3 feh picom kitty fonts-font-awesome lxappearance gtk2-engines-murrine scrot xss-lock slick-greeter lightdm-settings
 echo "< Desktop environment installed >"
 
 echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common nano scrot wget
+sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common nano wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable*
 echo "< Additional packages installed >"
