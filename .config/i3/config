@@ -12,6 +12,7 @@
 # Requirements  
 #======================================================================#
 # feh: set wallpaper
+# scrot: screenshot for locking the screen
 # picom: transparency
 # thunar: file manager
 # kitty: terminal
@@ -125,6 +126,9 @@ bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
 
 # Power menu
 bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
+
+# Lock by blurring the screen:
+bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
 #======================================================================#
 
 

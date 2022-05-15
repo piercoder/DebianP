@@ -43,7 +43,7 @@ echo ""
 echo "----------------------------------"
 echo "3 - Installing additional packages"
 echo "----------------------------------"
-sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common nano wget
+sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common nano scrot wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable*
 echo "< Additional packages installed >"
