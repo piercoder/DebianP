@@ -65,6 +65,7 @@ mkdir .icons
 wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
 unzip Dracula.zip -d .icons
 mv .icons ~/.icons
+rm Dracula.zip
 
 ln -s ~/piercoder/DebianP/.config/* ~/.config/
 ln -s ~/piercoder/DebianP/.bashrc ~/
