@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #======================================================================#
-#	 __     ___  __      __   __   __   ___  __  
-#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
-#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
-#	
-#	dmenu appkill                                             
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	dmenu appkill
 #======================================================================#
 
-# Colors  
+# Colors
 background="#282a36"
 currentline="#44475a"
 selection="#44475a"
@@ -28,9 +28,9 @@ backtransp="#282a36CC"
 lines="20"
 font="FontAwesome-12"
 
-# Theme  
+# Theme
 theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
 
-# kill process  
+# kill process
 process=$(ps -A | dmenu -i -p "Type to search ▶" $theme | awk {'print $1'}) 
 kill -9 $process 2>/dev/null
