@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #======================================================================#
-#	 __     ___  __      __   __   __   ___  __  
-#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
-#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
-#	
-#	dmenu power-off menu                                             
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	dmenu power-off menu
 #======================================================================#
 
-# Colors  
+# Colors
 background="#282a36"
 currentline="#44475a"
 selection="#44475a"
@@ -28,7 +28,7 @@ backtransp="#282a36CC"
 lines="3"
 font="FontAwesome-12"
 
-# Theme  
+# Theme
 theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
 
 # Power-off menu
