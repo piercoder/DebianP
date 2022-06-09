@@ -52,6 +52,8 @@ echo ""
 echo "-------------------------"
 echo "4- Configuring the system"
 echo "-------------------------"
+git clone https://gitlab.com/dwt1/wallpapers.git
+mv wallpapers .wallpapers
 ln -s ~/piercoder/DebianP/.wallpapers ~/
 
 mkdir .themes
