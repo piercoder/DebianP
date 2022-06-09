@@ -53,20 +53,18 @@ echo "-------------------------"
 echo "4- Configuring the system"
 echo "-------------------------"
 git clone https://gitlab.com/dwt1/wallpapers.git
-mv wallpapers .wallpapers
-ln -s ~/piercoder/DebianP/.wallpapers ~/
+mv wallpapers ~/.wallpapers
 
 mkdir .themes
 cd .themes
 git clone https://github.com/dracula/gtk
-ln -s ~/piercoder/DebianP/.themes ~/
 cd ..
+mv .themes ~/.themes
 
 mkdir .icons
-cd .icons
 wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
 unzip Dracula.zip -d .icons
-ln -s ~/piercoder/DebianP/.icons ~/
+mv .icons ~/.icons
 
 ln -s ~/piercoder/DebianP/.config/* ~/.config/
 ln -s ~/piercoder/DebianP/.bashrc ~/
