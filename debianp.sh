@@ -52,22 +52,24 @@ echo ""
 echo "-------------------------"
 echo "4- Configuring the system"
 echo "-------------------------"
-cp -r .wallpapers ~
+ln -s ~/piercoder/DebianP/.wallpapers ~/
 
 mkdir .themes
 cd .themes
 git clone https://github.com/dracula/gtk
+ln -s ~/piercoder/DebianP/.themes ~/
 cd ..
-cp -r .themes ~
 
 mkdir .icons
+cd .icons
 wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
 unzip Dracula.zip -d .icons
-cp -r .icons ~
+ln -s ~/piercoder/DebianP/.icons ~/
 
-cp -r .config ~
-cp .bashrc ~
+ln -s ~/piercoder/DebianP/.config/* ~/.config/
+ln -s ~/piercoder/DebianP/.bashrc ~/
 echo "< System configured >"
+
 
 echo ""
 echo "< All is done. Reboot your system. >"
