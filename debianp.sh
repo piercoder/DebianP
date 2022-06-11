@@ -67,7 +67,11 @@ unzip Dracula.zip -d .icons
 mv .icons ~/.icons
 rm Dracula.zip
 
-ln -s ~/piercoder/DebianP/.config/* ~/.config/
+ln -s ~/piercoder/DebianP/.config/geany ~/.config/
+ln -s ~/piercoder/DebianP/.config/i3 ~/.config/
+ln -s ~/piercoder/DebianP/.config/kitty ~/.config/
+ln -s ~/piercoder/DebianP/.config/nano ~/.config/
+ln -s ~/piercoder/DebianP/.config/.picom.conf ~/.config/
 ln -s ~/piercoder/DebianP/.bashrc ~/
 echo "< System configured >"
 
