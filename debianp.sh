@@ -69,6 +69,7 @@ mv .icons ~/.icons
 rm Dracula.zip
 
 ln -s ~/DebianP/.config/* ~/.config/
+ln -s ~/DebianP/.config/.picom.conf ~/.config/
 
 rm ~/.bashrc
 ln -s ~/DebianP/.bashrc ~/
