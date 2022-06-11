@@ -68,6 +68,8 @@ mv .icons ~/.icons
 rm Dracula.zip
 
 ln -s ~/DebianP/.config/* ~/.config/
+
+rm ~/.bashrc
 ln -s ~/DebianP/.bashrc ~/
 echo "< System configured >"
 
