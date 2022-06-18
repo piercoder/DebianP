@@ -125,7 +125,7 @@ bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
 # Kill processes
 bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
 
-# find files
+# Find files
 bindsym $mod+y exec ~/.config/i3/dmenubin/finder
 
 # Power menu
