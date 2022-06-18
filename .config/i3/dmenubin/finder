@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#======================================================================#
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	dmenu finde
+#======================================================================#
+
+# Colors
+background="#282a36"
+currentline="#44475a"
+selection="#44475a"
+foreground="#f8f8f2"
+comment="#6272a4"
+cyan="#8be9fd"
+green="#50fa7b"
+orange="#ffb86c"
+pink="#ff79c6"
+purple="#bd93f9"
+red="#ff5555"
+yellow="#f1fa8c"
+forealt="#bfbfbf"
+backtransp="#282a36CC"
+
+# Style
+lines="20"
+font="FontAwesome-12"
+
+# Theme
+theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
+
+# Find a file
+find ~ | sed -e "s/'/\\\'/g" -e 's/\ /\\ /g' | sort -f | dmenu -i -p "Type to search ▶" $theme | xargs -r xdg-open
+
