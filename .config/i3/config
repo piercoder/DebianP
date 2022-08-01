@@ -1,15 +1,15 @@
 #======================================================================#
-#	 __     ___  __      __   __   __   ___  __  
-#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
-#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
-#	
-#	my i3 configuration file                                             
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	my i3 configuration file
 #======================================================================#
 
 # i3 config file (v4)
 
 #======================================================================#
-# Requirements  
+# Requirements
 #======================================================================#
 # feh: set wallpaper
 # scrot: screenshot for locking the screen
@@ -24,7 +24,7 @@
 
 
 #======================================================================#
-# Variable definition  
+# Variable definition
 #======================================================================#
 # Mod
 set $mod Mod4
@@ -48,7 +48,7 @@ set $backtransp #282a36CC
 
 
 #======================================================================#
-# Basic appareance  
+# Basic appareance
 #======================================================================#
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -79,7 +79,7 @@ default_floating_border pixel 1
 
 
 #======================================================================#
-# Startup apps  
+# Startup apps
 #======================================================================#
 # Start XDG autostart .desktop files using dex. See also
 exec --no-startup-id dex --autostart --environment i3
@@ -102,7 +102,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 
 #======================================================================#
-# Keyboard shortcuts to start apps  
+# Keyboard shortcuts to start apps
 #======================================================================#
 # Terminal
 bindsym $mod+Return exec kitty
@@ -137,7 +137,7 @@ bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
 
 
 #======================================================================#
-# Window behavior  
+# Window behavior
 #======================================================================#
 # Focus follows mouse
 focus_follows_mouse yes
@@ -208,7 +208,7 @@ bindsym $mod+r mode "resize"
 
 
 #======================================================================#
-# Workspaces  
+# Workspaces
 #======================================================================#
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -252,7 +252,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number 
 
 
 #======================================================================#
-# Reload/restart/exit i3  
+# Reload/restart/exit i3
 #======================================================================#
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -266,7 +266,7 @@ bindsym $mod+Shift+e exit
 
 
 #======================================================================#
-# i3 bar configuration  
+# i3 bar configuration
 #======================================================================#
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -280,7 +280,7 @@ bar {
 			background $background
 			statusline $foreground
 			separator $selection
-			
+
 			# border background text
 #			focused_workspace $current $current $foreground
 			focused_workspace $comment $comment $foreground
