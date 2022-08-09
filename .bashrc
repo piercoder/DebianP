@@ -110,6 +110,12 @@ if ! shopt -oq posix; then
 fi
 
 #----------------------------------------------------------------------#
+# Brew
+#----------------------------------------------------------------------#
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+alias brewup='brew update && brew upgrade && brew doctor && brew cleanup'
+
+#----------------------------------------------------------------------#
 # Functions
 #----------------------------------------------------------------------#
 # Navigate n directory up
