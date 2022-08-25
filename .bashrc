@@ -98,6 +98,8 @@ fi
 
 PATH=$PATH:/usr/local/stata
 
+source ~/.nix-profile/etc/profile.d/nix.sh
+
 #----------------------------------------------------------------------#
 # Programmable completion
 #----------------------------------------------------------------------#
