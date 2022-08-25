@@ -98,8 +98,6 @@ fi
 
 PATH=$PATH:/usr/local/stata
 
-source ~/.nix-profile/etc/profile.d/nix.sh
-
 #----------------------------------------------------------------------#
 # Programmable completion
 #----------------------------------------------------------------------#
@@ -116,6 +114,12 @@ fi
 #----------------------------------------------------------------------#
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias brewup='brew update && brew upgrade && brew doctor && brew cleanup'
+
+#----------------------------------------------------------------------#
+# Nix
+#----------------------------------------------------------------------#
+source ~/.nix-profile/etc/profile.d/nix.sh
+alias nixup='nix-env -u'
 
 #----------------------------------------------------------------------#
 # Functions
@@ -196,7 +200,6 @@ bak()
 function hunt {
     find / -iname "*$1*" 2>/dev/null
 }
-
 
 #----------------------------------------------------------------------#
 # Aliases
