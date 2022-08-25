@@ -278,16 +278,16 @@ bar {
 
 		colors {
 			background $background
-			statusline $foreground
-			separator $selection
+			statusline $comment
+			separator $comment
 
 			# border background text
 #			focused_workspace $current $current $foreground
-			focused_workspace $comment $comment $foreground
-			active_workspace $background $current $foreground
-			inactive_workspace $background $background $forealt
-			urgent_workspace $red $red $foreground
-			binding_mode $red $red $foreground
+			focused_workspace $comment $comment $background
+			active_workspace $background $current $background
+			inactive_workspace $background $background $comment
+			urgent_workspace $purple $purple $comment
+			binding_mode $purple $purple $comment
 		}
 }
 #======================================================================#
