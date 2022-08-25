@@ -102,41 +102,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 
 #======================================================================#
-# Keyboard shortcuts to start apps
-#======================================================================#
-# Terminal
-bindsym $mod+Return workspace $ws1; exec kitty
-
-# Browser
-bindsym $mod+c workspace $ws2; exec google-chrome
-
-# Editor
-bindsym $mod+g workspace $ws3; exec geany
-
-# File manager
-bindsym $mod+t workspace $ws4; exec thunar
-
-# dmenu (program launcher)
-bindsym $mod+d exec "dmenu_run -nf '$comment' -nb '$background' -sb '$comment' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
-
-# Keybind help
-bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
-
-# Kill processes
-bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
-
-# Find files
-bindsym $mod+y exec ~/.config/i3/dmenubin/finder
-
-# Power menu
-bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
-
-# Lock by blurring the screen:
-bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
-#======================================================================#
-
-
-#======================================================================#
 # Window behavior
 #======================================================================#
 # Focus follows mouse
@@ -248,6 +213,41 @@ bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $
 bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
+#======================================================================#
+
+
+#======================================================================#
+# Keyboard shortcuts to start apps
+#======================================================================#
+# Terminal
+bindsym $mod+Return workspace $ws1; exec kitty
+
+# Browser
+bindsym $mod+c workspace $ws2; exec google-chrome
+
+# Editor
+bindsym $mod+g workspace $ws3; exec geany
+
+# File manager
+bindsym $mod+t workspace $ws4; exec thunar
+
+# dmenu (program launcher)
+bindsym $mod+d exec "dmenu_run -nf '$comment' -nb '$background' -sb '$comment' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
+
+# Keybind help
+bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
+
+# Kill processes
+bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
+
+# Find files
+bindsym $mod+y exec ~/.config/i3/dmenubin/finder
+
+# Power menu
+bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
+
+# Lock by blurring the screen:
+bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
 #======================================================================#
 
 
