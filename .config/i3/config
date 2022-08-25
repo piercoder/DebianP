@@ -105,16 +105,16 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Keyboard shortcuts to start apps
 #======================================================================#
 # Terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return workspace $ws1; exec kitty
 
 # Browser
-bindsym $mod+c exec google-chrome
+bindsym $mod+c workspace $ws2; exec google-chrome
 
 # Editor
-bindsym $mod+g exec geany
+bindsym $mod+g workspace $ws3; exec geany
 
 # File manager
-bindsym $mod+t exec thunar
+bindsym $mod+t workspace $ws4; exec thunar
 
 # dmenu (program launcher)
 bindsym $mod+d exec "dmenu_run -nf '$comment' -nb '$background' -sb '$comment' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
@@ -212,10 +212,10 @@ bindsym $mod+r mode "resize"
 #======================================================================#
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -276,13 +276,15 @@ bar {
         status_command i3status --config ~/.config/i3/i3status.conf
         separator_symbol " "
 
+		strip_workspace_numbers yes
+
+
 		colors {
 			background $background
 			statusline $comment
 			separator $comment
 
 			# border background text
-#			focused_workspace $current $current $foreground
 			focused_workspace $comment $comment $background
 			active_workspace $background $current $background
 			inactive_workspace $background $background $comment
