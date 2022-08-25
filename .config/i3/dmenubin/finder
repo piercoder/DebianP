@@ -29,7 +29,7 @@ lines="20"
 font="FontAwesome-12"
 
 # Theme
-theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
+theme="-l $lines -nf $comment -nb $background -sb $comment -sf $background -fn $font"
 
 # Find a file
 find ~ | sed -e "s/'/\\\'/g" -e 's/\ /\\ /g' | sort -f | dmenu -i -p "Type to search ▶" $theme | xargs -r xdg-open

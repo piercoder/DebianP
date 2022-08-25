@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #======================================================================#
-#	 __     ___  __      __   __   __   ___  __  
-#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
-#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
-#	
-#	show i3 keyboard shortcuts                                             
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	show i3 keyboard shortcuts
 #======================================================================#
 
-# Colors  
+# Colors
 background="#282a36"
 currentline="#44475a"
 selection="#44475a"
@@ -28,8 +28,8 @@ backtransp="#282a36CC"
 lines="20"
 font="FontAwesome-12"
 
-# Theme  
-theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
+# Theme
+theme="-l $lines -nf $comment -nb $background -sb $comment -sf $background -fn $font"
 
 # Define the file path and name
 FileName=~/.config/i3/config

@@ -29,7 +29,7 @@ lines="3"
 font="FontAwesome-12"
 
 # Theme
-theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
+theme="-l $lines -nf $comment -nb $background -sb $comment -sf $background -fn $font"
 
 # Power-off menu
 

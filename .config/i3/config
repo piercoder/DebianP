@@ -117,7 +117,7 @@ bindsym $mod+g exec geany
 bindsym $mod+t exec thunar
 
 # dmenu (program launcher)
-bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$comment' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
+bindsym $mod+d exec "dmenu_run -nf '$comment' -nb '$background' -sb '$comment' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
 # Keybind help
 bindsym $mod+k exec ~/.config/i3/dmenubin/showkey

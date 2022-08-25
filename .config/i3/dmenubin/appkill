@@ -29,8 +29,8 @@ lines="20"
 font="FontAwesome-12"
 
 # Theme
-theme="-l $lines -nf $foreground -nb $background -sb $comment -sf $foreground -fn $font"
+theme="-l $lines -nf $comment -nb $background -sb $comment -sf $background -fn $font"
 
 # kill process
-process=$(ps -A | dmenu -i -p "Type to search ▶" $theme | awk {'print $1'}) 
+process=$(ps -A | dmenu -i -p "Type to search ▶" $theme | awk {'print $1'})
 kill -9 $process 2>/dev/null
