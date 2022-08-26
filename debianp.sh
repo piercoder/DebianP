@@ -62,12 +62,6 @@ git clone https://github.com/dracula/gtk
 cd ..
 mv .themes ~/.themes
 
-mkdir .icons
-wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
-unzip Dracula.zip -d .icons
-mv .icons ~/.icons
-rm Dracula.zip
-
 ln -s ~/DebianP/.config/* ~/.config/
 ln -s ~/DebianP/.config/.picom.conf ~/.config/
 
