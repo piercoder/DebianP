@@ -243,7 +243,10 @@ bindsym $mod+y exec ~/.config/i3/dmenubin/finder
 # Power menu
 bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
 
-# Lock by blurring the screen:
+# Screenshot
+bindsym $mod+p exec scrot
+
+# Lock by blurring the screen
 bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
 #======================================================================#
 
