@@ -12,7 +12,7 @@
 # Requirements
 #======================================================================#
 # feh: set wallpaper
-# scrot: screenshot for locking the screen
+# scrot: screenshot
 # xss-lock: lock the screen
 # picom: transparency
 # thunar: file manager
