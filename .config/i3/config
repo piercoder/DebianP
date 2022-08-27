@@ -96,11 +96,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Clipboard manager applet (system tray)
+exec --no-startup-id parcellite
+
 # NetworkManager applet (system tray)
 exec --no-startup-id nm-applet
 
-# Clipboard manager applet (system tray)
-exec --no-startup-id parcellite
+# Dropbox applet (system tray)
+exec --no-startup-id dropbox start -i
 #======================================================================#
 
 
