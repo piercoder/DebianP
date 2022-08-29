@@ -249,7 +249,7 @@ bindsym $mod+y exec ~/.config/i3/dmenubin/finder
 bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
 
 # Screenshot
-bindsym $mod+p exec scrot
+bindsym $mod+p exec flameshot gui
 
 # Lock by blurring the screen
 bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
