@@ -13,13 +13,14 @@
 #======================================================================#
 # feh: set wallpaper
 # scrot: screenshot
+# flameshot: screenshot
 # xss-lock: lock the screen
 # picom: transparency
 # thunar: file manager
 # kitty: terminal
 # google-chrome: browser
 # geany: editor
-# parcellite: clipboard manager
+# diodon: clipboard manager
 # lxappearance: gtk color matching
 #======================================================================#
 
@@ -97,7 +98,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Clipboard manager applet (system tray)
-exec --no-startup-id parcellite
+exec --no-startup-id diodon
+
+# Screenshot (system tray)
+exec --no-startup-id flameshot
 
 # NetworkManager applet (system tray)
 exec --no-startup-id nm-applet

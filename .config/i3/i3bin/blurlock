@@ -10,7 +10,7 @@
 #======================================================================#
 
 PICTURE=/tmp/i3lock.png
-SCREENSHOT="scrot -z $PICTURE"
+SCREENSHOT="flameshot screen -p $PICTURE"
 
 BLUR="5x4"
 
