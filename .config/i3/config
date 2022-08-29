@@ -12,15 +12,14 @@
 # Requirements
 #======================================================================#
 # feh: set wallpaper
-# scrot: screenshot
+# picom: transparency
 # flameshot: screenshot
 # xss-lock: lock the screen
-# picom: transparency
+# diodon: clipboard manager
 # thunar: file manager
 # kitty: terminal
 # google-chrome: browser
 # geany: editor
-# diodon: clipboard manager
 # lxappearance: gtk color matching
 #======================================================================#
 
