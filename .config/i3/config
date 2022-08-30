@@ -34,19 +34,8 @@ set $mod Mod4
 
 # Colors
 set $background #282a36
-set $currentline #44475a
-set $selection #44475a
-set $foreground #f8f8f2
-set $comment #6272a4
-set $cyan #8be9fd
-set $green #50fa7b
-set $orange #ffb86c
-set $pink #ff79c6
-set $purple #bd93f9
-set $red #ff5555
-set $yellow #f1fa8c
-set $forealt #bfbfbf
-set $backtransp #282a36CC
+set $foreground #6272a4
+set $critical #bd93f9
 #======================================================================#
 
 
@@ -65,12 +54,12 @@ exec --no-startup-id picom --config ~/.config/.picom.conf
 
 # Window colors
 # class border bground text indicator child_border
-client.focused $comment $comment $foreground $comment $comment
-client.focused_inactive $currentline $currentline $foreground $currentline $currentline
-client.unfocused $background $background $forealt $background $background
-client.urgent $currentline $red $foreground $red $red
+client.focused $foreground $foreground $background $foreground $foreground
+client.focused_inactive $background $background $foreground $background $background
+client.unfocused $background $background $foreground $background $background
+client.urgent $critical $critical $background $critical $critical
 client.placeholder $background $background $foreground $background $background
-client.background $foreground
+client.background $background
 
 # Window title alignment
 title_align center
@@ -236,7 +225,7 @@ bindsym $mod+g workspace $ws3; exec geany
 bindsym $mod+t workspace $ws4; exec thunar
 
 # dmenu (program launcher)
-bindsym $mod+d exec "dmenu_run -nf '$comment' -nb '$background' -sb '$comment' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
+bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$foreground' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
 # Keybind help
 bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
@@ -285,15 +274,15 @@ bar {
 
 		colors {
 			background $background
-			statusline $comment
-			separator $comment
+			statusline $foreground
+			separator $foreground
 
 			# border background text
-			focused_workspace $comment $comment $background
-			active_workspace $background $current $background
-			inactive_workspace $background $background $comment
-			urgent_workspace $purple $purple $comment
-			binding_mode $purple $purple $comment
+			focused_workspace $foreground $foreground $background
+			active_workspace $background $background $foreground
+			inactive_workspace $background $background $foreground
+			urgent_workspace $critical $critical $foreground
+			binding_mode $critical $critical $foreground
 		}
 }
 #======================================================================#
