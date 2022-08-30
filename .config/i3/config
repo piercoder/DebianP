@@ -95,9 +95,6 @@ exec --no-startup-id flameshot
 
 # NetworkManager applet (system tray)
 exec --no-startup-id nm-applet
-
-# Meestral applet for dropbox (system tray)
-exec --no-startup-id maestral_qt
 #======================================================================#
 
 
