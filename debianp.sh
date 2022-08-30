@@ -36,7 +36,11 @@ echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt install i3 feh picom kitty fonts-font-awesome lxappearance gtk2-engines-murrine flameshot xss-lock diodon slick-greeter lightdm-settings
+sudo apt purge xfce4-notifyd ## if you started from the xfce installation, uninstall the xfce notification daemon to use dunst
+sudo apt autoremove
+sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
+sudo apt autoremove
+sudo apt install i3 feh picom kitty fonts-font-awesome lxappearance gtk2-engines-murrine dunst libnotify-bin flameshot xss-lock diodon network-manager-gnome slick-greeter lightdm-settings
 echo "< Desktop environment installed >"
 
 echo ""
