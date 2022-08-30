@@ -112,8 +112,8 @@ fi
 #----------------------------------------------------------------------#
 # Brew
 #----------------------------------------------------------------------#
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-alias brewup='brew update && brew upgrade && brew doctor && brew cleanup'
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#alias brewup='brew update && brew upgrade && brew doctor && brew cleanup'
 
 #----------------------------------------------------------------------#
 # Nix
