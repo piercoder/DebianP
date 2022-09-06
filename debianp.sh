@@ -128,6 +128,7 @@ mv .themes ~/.themes
 echo "< GTK theme installed >"
 
 echo ""
+mkdir -p ~/.config/
 ln -s ~/DebianP/.config/* ~/.config/
 ln -s ~/DebianP/.config/.picom.conf ~/.config/
 rm ~/.bashrc
