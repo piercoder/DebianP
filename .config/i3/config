@@ -9,24 +9,6 @@
 # i3 config file (v4)
 
 #======================================================================#
-# Requirements
-#======================================================================#
-# feh: set wallpaper
-# picom: transparency
-# flameshot: screenshot
-# xss-lock: lock the screen
-# nm-applet: network manager 
-# diodon: clipboard manager
-# dunst: notify-send: notification service
-# thunar: file manager
-# kitty: terminal
-# google-chrome: browser
-# geany: editor
-# lxappearance: gtk color matching
-#======================================================================#
-
-
-#======================================================================#
 # Variable definition
 #======================================================================#
 # Mod
@@ -92,6 +74,9 @@ exec --no-startup-id diodon
 
 # Screenshot (system tray)
 exec --no-startup-id flameshot
+
+# Volume icon applet (system tray)
+#exec --no-startup-id pasystray
 
 # NetworkManager applet (system tray)
 exec --no-startup-id nm-applet
