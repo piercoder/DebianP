@@ -5,10 +5,10 @@
 #   |__) | |__  |__)    /  ` /  \ |  \ |__  |__)
 #   |    | |___ |  \    \__, \__/ |__/ |___ |  \
 #
-#   my debian post installation script
+#   My minimal debian post installation script.
+#   Install packages after installing base Debian with no GUI.
+#   Or after installing a base Debian XFCE installation.
 #======================================================================#
-
-# It's easier to start with a debian XFCE installation
 
 echo ""
 echo '+==================================================+'
@@ -22,6 +22,7 @@ echo ""
 echo "------------------------"
 echo "1 - Upgrading the system"
 echo "------------------------"
+echo ""
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo cp sources.list /etc/apt/sources.list
 echo "< Sources list updated >"
@@ -30,49 +31,111 @@ echo ""
 sudo apt update && sudo apt full-upgrade && sudo apt autoremove
 sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
 sudo apt autoremove
+echo "< System upgraded >"
+
+echo ""
 echo "< System updated >"
 
 echo ""
 echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
-sudo apt purge xfce4-notifyd ## if you started from the xfce installation, uninstall the xfce notification daemon to use dunst
+echo ""
+sudo apt purge xfce4-notifyd ## if you started from the xfce installation, uninstall unneeded packages to use alternatives instead
 sudo apt autoremove
 sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
 sudo apt autoremove
-sudo apt install i3 feh picom kitty fonts-font-awesome lxappearance gtk2-engines-murrine dunst libnotify-bin flameshot xss-lock diodon network-manager-gnome slick-greeter lightdm-settings pasystray
-echo "< Desktop environment installed >"
+echo "< Unneded packages uninstalled >"
 
 echo ""
-echo "----------------------------------"
-echo "3 - Installing additional packages"
-echo "----------------------------------"
-sudo apt install thunar gvfs-backends gvfs-fuse geany geany-common nano wget
+sudo apt install -y man wget
+echo "< System utitlities installed >"
+
+# Microcode for AMD/Intel
+# echo ""
+# sudo apt install -y amd64-microcode
+# sudo apt install -y intel-microcode 
+# echo "< Microcode installed>"
+
+echo ""
+sudo apt install -y i3
+echo "< Window manager installed >"
+ 
+echo ""
+sudo apt install -y feh picom lxappearance fonts-font-awesome 
+echo "< Window manager ricing packages installed >"
+
+echo ""
+sudo apt install -y lightdm slick-greeter lightdm-settings 
+echo "< Display manager installed >"
+
+echo ""
+sudo apt install -y pulseaudio alsa-utils pavucontrol
+echo "< Audio packages installed >"
+
+echo ""
+sudo apt install -y dunst libnotify-bin 
+echo "< Notification packages installed >"
+
+echo ""
+sudo apt install -y flameshot diodon network-manager-gnome pasystray
+echo "< System-tray applets installed >"
+
+#echo ""
+#sudo apt install -y xfce4-power-manager
+#echo "< Power manager installed >"
+
+echo ""
+sudo apt install -y kitty
+echo "< Terminal installed >"
+
+echo ""
+sudo apt install -y thunar gvfs-backends gvfs-fuse 
+echo "< File manager installed >"
+
+echo ""
+sudo apt install -y geany geany-common 
+echo "< Text editor installed >"
+
+echo ""
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable*
+sudo apt install -y ./google-chrome-stable*
 rm google-chrome-stable*
+echo "< Browser installed >"
+
+echo ""
+sudo apt install -y gtk2-engines-murrine
 echo "< Additional packages installed >"
 
 echo ""
-echo "-------------------------"
-echo "4- Configuring the system"
-echo "-------------------------"
+echo "< Desktop environment installed >"
+
+echo ""
+echo "--------------------------"
+echo "3 - Configuring the system"
+echo "--------------------------"
+echo ""
 git clone https://gitlab.com/dwt1/wallpapers.git
 mv wallpapers ~/.wallpapers
+echo "< Wallpapers installed >"
 
+echo ""
 mkdir .themes
 cd .themes
 git clone https://github.com/dracula/gtk
 cd ..
 mv .themes ~/.themes
+echo "< GTK theme installed >"
 
+echo ""
 ln -s ~/DebianP/.config/* ~/.config/
 ln -s ~/DebianP/.config/.picom.conf ~/.config/
-
 rm ~/.bashrc
 ln -s ~/DebianP/.bashrc ~/
-echo "< System configured >"
+echo "< Configuration files copied >"
 
+echo ""
+echo "< System configured >"
 
 echo ""
 echo "< All is done. Reboot your system. >"
