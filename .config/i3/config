@@ -193,7 +193,7 @@ bindsym $mod+Next scratchpad show
 
 
 #======================================================================#
-# Keyboard shortcuts to start apps
+# Keyboard bindings
 #======================================================================#
 # Terminal
 bindsym $mod+Return workspace $ws1; exec kitty
