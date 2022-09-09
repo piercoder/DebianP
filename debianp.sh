@@ -137,6 +137,7 @@ echo "< Configuration files copied >"
 
 echo ""
 echo "< System configured >"
+echo "$(dpkg -l | grep -c ^ii) packages installed on your system"
 
 echo ""
 echo "< All is done. Reboot your system. >"
