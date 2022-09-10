@@ -54,19 +54,19 @@ echo "< System utitlities installed >"
 # Microcode for AMD/Intel
 # echo ""
 # sudo apt install -y amd64-microcode
-# sudo apt install -y intel-microcode 
+# sudo apt install -y intel-microcode
 # echo "< Microcode installed>"
 
 echo ""
 sudo apt install -y i3
 echo "< Window manager installed >"
- 
+
 echo ""
-sudo apt install -y feh picom lxappearance fonts-font-awesome 
+sudo apt install -y feh picom lxappearance fonts-font-awesome
 echo "< Window manager ricing packages installed >"
 
 echo ""
-sudo apt install -y lightdm slick-greeter lightdm-settings 
+sudo apt install -y lightdm slick-greeter lightdm-settings
 echo "< Display manager installed >"
 
 echo ""
@@ -74,27 +74,27 @@ sudo apt install -y pulseaudio alsa-utils pavucontrol
 echo "< Audio packages installed >"
 
 echo ""
-sudo apt install -y dunst libnotify-bin 
+sudo apt install -y dunst libnotify-bin
 echo "< Notification packages installed >"
 
 echo ""
 sudo apt install -y flameshot diodon network-manager-gnome pasystray
 echo "< System-tray applets installed >"
 
-#echo ""
-#sudo apt install -y xfce4-power-manager
-#echo "< Power manager installed >"
+echo ""
+sudo apt install -y xfce4-power-manager
+echo "< Power manager installed >"
 
 echo ""
 sudo apt install -y kitty
 echo "< Terminal installed >"
 
 echo ""
-sudo apt install -y thunar gvfs-backends gvfs-fuse 
+sudo apt install -y thunar gvfs-backends gvfs-fuse
 echo "< File manager installed >"
 
 echo ""
-sudo apt install -y geany geany-common 
+sudo apt install -y geany geany-common
 echo "< Text editor installed >"
 
 echo ""
