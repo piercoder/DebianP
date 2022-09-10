@@ -139,6 +139,15 @@ ln -s ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"
 
 echo ""
+mkdir buffer
+cd buffer
+git clone https://github.com/geany/geany-themes
+mkdir -p ~/.config/geany/colorschemes/
+mv geany-themes/colorschemes/*.conf ~/.config/geany/colorschemes/ 
+cd ..
+rm -rf buffer
+
+echo ""
 sudo apt autoremove -y
 sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
 sudo apt autoremove -y
