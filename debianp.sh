@@ -28,9 +28,9 @@ sudo cp sources.list /etc/apt/sources.list
 echo "< Sources list updated >"
 
 echo ""
-sudo apt update && sudo apt full-upgrade && sudo apt autoremove
-sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
-sudo apt autoremove
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
+sudo apt autoremove -y
 echo "< System upgraded >"
 
 echo ""
@@ -41,10 +41,10 @@ echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
-sudo apt purge xfce4-notifyd ## if you started from the xfce installation, uninstall unneeded packages to use alternatives instead
-sudo apt autoremove
-sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
-sudo apt autoremove
+sudo apt purge -y xfce4-notifyd ## if you started from the xfce installation, uninstall unneeded packages to use alternatives instead
+sudo apt autoremove -y
+sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
+sudo apt autoremove -y
 echo "< Unneded packages uninstalled >"
 
 echo ""
@@ -136,6 +136,9 @@ ln -s ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"
 
 echo ""
+sudo apt autoremove -y
+sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
+sudo apt autoremove -y
 echo "< System configured >"
 echo "$(dpkg -l | grep -c ^ii) packages installed on your system"
 
