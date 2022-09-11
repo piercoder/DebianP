@@ -5,9 +5,9 @@
 #   |__) | |__  |__)    /  ` /  \ |  \ |__  |__)
 #   |    | |___ |  \    \__, \__/ |__/ |___ |  \
 #
-#   My minimal debian post installation script.
+#   My Debian post installation script.
 #   Install packages after installing base Debian with no GUI.
-#   Or after installing a base Debian XFCE installation.
+#   Or after base Debian XFCE installation.
 #======================================================================#
 
 echo ""
