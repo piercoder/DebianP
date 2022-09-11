@@ -146,6 +146,7 @@ mkdir -p ~/.config/geany/colorschemes/
 mv geany-themes/colorschemes/*.conf ~/.config/geany/colorschemes/ 
 cd ..
 rm -rf buffer
+echo "< Geany themes installed >"
 
 echo ""
 sudo apt autoremove -y
