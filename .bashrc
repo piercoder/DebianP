@@ -96,7 +96,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-PATH=$PATH:/usr/local/stata
+if [ -d "/usr/local/stata" ] ; then
+    PATH="$PATH:/usr/local/stata"
+fi
 
 #----------------------------------------------------------------------#
 # Programmable completion
@@ -112,14 +114,18 @@ fi
 #----------------------------------------------------------------------#
 # Brew
 #----------------------------------------------------------------------#
-#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-#alias brewup='brew update && brew upgrade && brew doctor && brew cleanup'
+if [ -d "/home/linuxbrew/" ] ; then
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	alias brewup='brew update && brew upgrade && brew doctor && brew cleanup'
+fi
 
 #----------------------------------------------------------------------#
 # Nix
 #----------------------------------------------------------------------#
-#source ~/.nix-profile/etc/profile.d/nix.sh
-#alias nixup='nix-env -u'
+if [ -d "~/.nix-profile/" ] ; then
+	source ~/.nix-profile/etc/profile.d/nix.sh
+	alias nixup='nix-env -u'
+fi
 
 #----------------------------------------------------------------------#
 # Functions
