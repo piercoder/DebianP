@@ -5,7 +5,7 @@
 #   |__) | |__  |__)    /  ` /  \ |  \ |__  |__)
 #   |    | |___ |  \    \__, \__/ |__/ |___ |  \
 #
-#   My Debian post installation script.
+#   My Debian i3 post installation script.
 #   Install packages after installing base Debian with no GUI.
 #   Or after base Debian XFCE installation.
 #======================================================================#
