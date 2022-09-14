@@ -153,6 +153,8 @@ sudo apt autoremove -y
 sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
 sudo apt autoremove -y
 echo "< System configured >"
+
+echo ""
 echo "$(dpkg -l | grep -c ^ii) packages installed on your system"
 
 echo ""
