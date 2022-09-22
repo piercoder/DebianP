@@ -107,6 +107,11 @@ rm google-chrome-stable*
 echo "< Browser installed >"
 
 echo ""
+sudo apt install -y python3-pip
+sudo pip3 install i3altlayout
+echo "< Autotiling module installed >"
+
+echo ""
 sudo apt install -y gtk2-engines-murrine
 echo "< Additional packages installed >"
 
