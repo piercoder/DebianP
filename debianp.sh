@@ -65,6 +65,11 @@ echo ""
 sudo apt install -y man wget curl
 echo "< System utitlities installed >"
 
+echo ""
+sudo apt install -y flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo "< Flatpak installed >"
+
 # Microcode for AMD/Intel
 # echo ""
 # sudo apt install -y amd64-microcode
@@ -125,11 +130,6 @@ echo "< Browser installed >"
 echo ""
 sudo apt install -y gtk2-engines-murrine
 echo "< Additional packages installed >"
-
-echo ""
-sudo apt install -y flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-echo "< Flatpak installed >"
 
 echo ""
 flatpak -y install flathub com.dropbox.Client
