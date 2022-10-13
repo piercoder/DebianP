@@ -237,10 +237,6 @@ alias aptup='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 
 alias gitup='git add . && git commit -m "Update: $(date)" && git push'
 
-alias monitorcpumem='sudo htop'
-alias monitornet='sudo jnettop'
-alias monitordisk='sudo ncdu /'
-
 #----------------------------------------------------------------------#
 # Startup message
 #----------------------------------------------------------------------#
