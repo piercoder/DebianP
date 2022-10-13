@@ -80,6 +80,11 @@ sudo apt install -y feh picom lxappearance fonts-font-awesome
 echo "< Window manager ricing packages installed >"
 
 echo ""
+sudo apt install -y python3-pip
+sudo pip3 install i3altlayout
+echo "< Autotiling module installed >"
+
+echo ""
 sudo apt install -y lightdm slick-greeter lightdm-settings
 echo "< Display manager installed >"
 
@@ -118,13 +123,17 @@ rm chrome.deb
 echo "< Browser installed >"
 
 echo ""
-sudo apt install -y python3-pip
-sudo pip3 install i3altlayout
-echo "< Autotiling module installed >"
-
-echo ""
 sudo apt install -y gtk2-engines-murrine
 echo "< Additional packages installed >"
+
+echo ""
+sudo apt install -y flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo "< Flatpak installed >"
+
+echo ""
+flatpak -y install flathub com.dropbox.Client
+echo "< Dropbox installed >"
 
 echo ""
 echo "< Desktop environment installed >"
@@ -142,6 +151,7 @@ echo ""
 mkdir .themes
 cd .themes
 git clone https://github.com/dracula/gtk
+mv gtk dracula
 cd ..
 mv .themes ~/.themes
 echo "< GTK theme installed >"
