@@ -10,6 +10,21 @@
 #   Or after base Debian XFCE installation.
 #======================================================================#
 
+#Functions
+clean()
+{
+  sudo apt autoremove -y
+  sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
+  sudo apt autoremove -y
+}
+
+update()
+{
+sudo apt update
+sudo apt full-upgrade -y
+ sudo apt autoremove -y
+}
+
 echo ""
 echo '+==================================================+'
 echo '|     __   ___  __               __                |'
@@ -27,9 +42,7 @@ echo ""
 sudo apt purge -y xfce4-goodies xfce4-notifyd xfce4-terminal xsane parole cups*
 sudo apt purge -y libreoffice* firefox-esr* exfalso gimp* mousepad ristretto sane*  
 sudo apt purge -y gnome-accessibility-themes lynx* synaptic vim* 
-sudo apt autoremove -y
-sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
-sudo apt autoremove -y
+clean
 echo "< Unneded packages uninstalled >"
 
 echo ""
@@ -38,9 +51,7 @@ sudo cp sources.list /etc/apt/sources.list
 echo "< Sources list updated >"
 
 echo ""
-sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
-sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
-sudo apt autoremove -y
+update
 echo "< System upgraded >"
 
 echo ""
@@ -101,9 +112,9 @@ sudo apt install -y geany geany-common
 echo "< Text editor installed >"
 
 echo ""
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install -y ./google-chrome-stable*
-rm google-chrome-stable*
+wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./chrome.deb
+rm chrome.deb
 echo "< Browser installed >"
 
 echo ""
@@ -144,19 +155,17 @@ ln -s ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"
 
 echo ""
-mkdir buffer
-cd buffer
+mkdir geanythemes
+cd geanythemes
 git clone https://github.com/geany/geany-themes
 mkdir -p ~/.config/geany/colorschemes/
 mv geany-themes/colorschemes/*.conf ~/.config/geany/colorschemes/ 
 cd ..
-rm -rf buffer
+rm -rf geanythemes
 echo "< Geany themes installed >"
 
 echo ""
-sudo apt autoremove -y
-sudo apt purge -y $(dpkg -l | grep "^rc" | awk '{print $2}')
-sudo apt autoremove -y
+clean
 echo "< System configured >"
 
 echo ""
