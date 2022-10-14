@@ -179,6 +179,7 @@ ex ()
 # Clean removed package residual configuration files
 cleanup ()
 {
+  sudo apt autoremove
   sudo apt purge $(dpkg -l | grep "^rc" | awk '{print $2}')
   sudo apt autoremove
 }
