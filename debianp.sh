@@ -46,7 +46,7 @@ echo "------------------------"
 ## if you started from the xfce installation, uninstall unneeded packages to use alternatives instead
 echo ""
 sudo apt purge -y xfce4-goodies xfce4-notifyd xfce4-terminal xsane parole cups*
-sudo apt purge -y libreoffice* firefox-esr* exfalso gimp* mousepad ristretto sane*  
+sudo apt purge -y libreoffice* firefox-esr* exfalso gimp* mousepad sane*  
 sudo apt purge -y gnome-accessibility-themes lynx* synaptic vim* 
 clean
 echo "< Unneded packages uninstalled >"
@@ -127,6 +127,10 @@ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_curre
 sudo apt install -y ./chrome.deb
 rm chrome.deb
 echo "< Browser installed >"
+
+echo ""
+sudo apt install -y ristretto atril atril-common
+echo "< Utilities installed >"
 
 echo ""
 sudo apt install -y gtk2-engines-murrine
