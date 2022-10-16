@@ -29,7 +29,7 @@ set $critical #bd93f9
 font pango:FontAwesome 10
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill --randomize ~/.wallpapers/*
+exec_always --no-startup-id feh --bg-fill --randomize ~/.wallpapers/*
 
 # Transparency
 exec --no-startup-id picom --config ~/.config/.picom.conf
@@ -59,7 +59,7 @@ default_floating_border pixel 1
 exec --no-startup-id dex --autostart --environment i3
 
 # Autotiling
-exec --no-startup-id i3altlayout
+exec_always --no-startup-id i3altlayout
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
