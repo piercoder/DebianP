@@ -68,7 +68,7 @@ echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
-sudo apt install -y man wget curl neofetch
+sudo apt install -y man wget curl neofetch deborphan
 echo "< System utitlities installed >"
 
 # Microcode for AMD/Intel
