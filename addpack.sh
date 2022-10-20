@@ -20,16 +20,16 @@ source ~/.nix-profile/etc/profile.d/nix.sh
 #----------------------------------------------------------------------#
 # Install flatpak
 #----------------------------------------------------------------------#
-echo ""
-sudo apt install -y flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# echo ""
+# sudo apt install -y flatpak
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 #----------------------------------------------------------------------#
 
 #----------------------------------------------------------------------#
 # Install packages
 #----------------------------------------------------------------------#
 nix-env -iA nixpkgs.teams nixpkgs.onlyoffice-bin
-flatpak -y install flathub com.dropbox.Client
+# flatpak -y install flathub com.dropbox.Client
 #----------------------------------------------------------------------#
 
 #----------------------------------------------------------------------#
