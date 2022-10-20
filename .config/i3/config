@@ -59,7 +59,7 @@ default_floating_border pixel 1
 exec --no-startup-id dex --autostart --environment i3
 
 # Autotiling
-exec_always --no-startup-id i3altlayout
+exec_always --no-startup-id ~/.local/bin/i3altlayout
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

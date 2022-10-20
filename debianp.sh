@@ -72,10 +72,10 @@ sudo apt install -y man wget curl neofetch deborphan
 echo "< System utitlities installed >"
 
 # Microcode for AMD/Intel
-# echo ""
+echo ""
 # sudo apt install -y amd64-microcode
-# sudo apt install -y intel-microcode
-# echo "< Microcode installed>"
+sudo apt install -y intel-microcode
+echo "< Microcode installed>"
 
 echo ""
 sudo apt install -y i3
@@ -149,12 +149,13 @@ mv wallpapers ~/.wallpapers
 echo "< Wallpapers installed >"
 
 echo ""
-mkdir .themes
-cd .themes
-git clone https://github.com/dracula/gtk
-mv gtk dracula
-cd ..
-mv .themes ~/.themes
+# mkdir .themes
+# cd .themes
+# git clone https://github.com/dracula/gtk
+# mv gtk dracula
+# cd ..
+# mv .themes ~/.themes
+sudo apt install -y gnome-themes-extra adwaita-icon-theme
 echo "< GTK theme installed >"
 
 echo ""
