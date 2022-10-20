@@ -87,7 +87,7 @@ echo "< Window manager ricing packages installed >"
 
 echo ""
 sudo apt install -y python3-pip
-sudo pip3 install i3altlayout
+pip3 install i3altlayout
 echo "< Autotiling module installed >"
 
 echo ""

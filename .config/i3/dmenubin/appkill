@@ -9,16 +9,16 @@
 #======================================================================#
 
 # Colors
-background="#282a36"
-foreground="#6272a4"
-critical="#bd93f9"
+background="#353535"
+foreground="#EEEEEC"
+critical="#15539E"
 
 # Style
 lines="20"
 font="FontAwesome-12"
 
 # Theme
-theme="-l $lines -nf $foreground -nb $background -sb $foreground -sf $background -fn $font"
+theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -fn $font"
 
 # kill process
 process=$(ps -A | dmenu -i -p "Type to search ▶" $theme | awk {'print $1'})

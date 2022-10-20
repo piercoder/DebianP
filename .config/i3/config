@@ -15,9 +15,9 @@
 set $mod Mod4
 
 # Colors
-set $background #282a36
-set $foreground #6272a4
-set $critical #bd93f9
+set $background #353535
+set $foreground #EEEEEC
+set $critical #15539E
 #======================================================================#
 
 
@@ -26,7 +26,7 @@ set $critical #bd93f9
 #======================================================================#
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:FontAwesome 10
+font pango:FontAwesome 11
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill --randomize ~/.wallpapers/*
@@ -63,7 +63,7 @@ exec_always --no-startup-id ~/.local/bin/i3altlayout
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color=282a36
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color=353535
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -212,7 +212,7 @@ bindsym $mod+g workspace $ws3; exec geany
 bindsym $mod+t workspace $ws4; exec thunar
 
 # dmenu (program launcher)
-bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$foreground' -sf '$background' -fn 'FontAwesome-12' -p 'Type to search ▶'"
+bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
 # Keybind help
 bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
@@ -265,11 +265,11 @@ bar {
 			separator $foreground
 
 			# border background text
-			focused_workspace $foreground $foreground $background
+			focused_workspace $critical $critical $foreground			
 			active_workspace $background $background $foreground
 			inactive_workspace $background $background $foreground
-			urgent_workspace $critical $critical $foreground
-			binding_mode $critical $critical $foreground
+			urgent_workspace $foreground $foreground $critical
+			binding_mode $foreground $foreground $critical
 		}
 }
 #======================================================================#
