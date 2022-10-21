@@ -46,8 +46,8 @@ echo "------------------------"
 ## if you started from the xfce installation, uninstall unneeded packages to use alternatives instead
 echo ""
 sudo apt purge -y xfce4-goodies xfce4-notifyd xfce4-terminal xsane cups*
-sudo apt purge -y libreoffice* firefox-esr* exfalso gimp* mousepad sane*  
-sudo apt purge -y gnome-accessibility-themes lynx* synaptic vim* 
+sudo apt purge -y libreoffice* firefox-esr* exfalso gimp* mousepad sane*
+sudo apt purge -y gnome-accessibility-themes lynx* synaptic vim*
 clean
 echo "< Unneded packages uninstalled >"
 
@@ -165,7 +165,7 @@ mkdir geanythemes
 cd geanythemes
 git clone https://github.com/geany/geany-themes
 mkdir -p ~/.config/geany/colorschemes/
-mv geany-themes/colorschemes/*.conf ~/.config/geany/colorschemes/ 
+mv geany-themes/colorschemes/*.conf ~/.config/geany/colorschemes/
 cd ..
 rm -rf geanythemes
 echo "< Geany themes installed >"
