@@ -59,7 +59,6 @@ echo "< Sources list updated >"
 echo ""
 update
 echo "< System upgraded >"
-
 echo ""
 echo "< System updated >"
 
