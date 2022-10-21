@@ -119,7 +119,7 @@ sudo apt install -y thunar gvfs-backends gvfs-fuse
 echo "< File manager installed >"
 
 echo ""
-sudo apt install -y geany geany-common
+sudo apt install -y geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck
 echo "< Text editor installed >"
 
 echo ""
