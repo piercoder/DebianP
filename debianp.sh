@@ -83,7 +83,7 @@ echo "< Window manager installed >"
 
 echo ""
 sudo apt install -y feh picom lxappearance fonts-font-awesome
-echo "< Window manager ricing packages installed >"
+echo "< Window manager utils installed >"
 
 echo ""
 sudo apt install -y python3-pip
@@ -149,12 +149,6 @@ mv wallpapers ~/.wallpapers
 echo "< Wallpapers installed >"
 
 echo ""
-# mkdir .themes
-# cd .themes
-# git clone https://github.com/dracula/gtk
-# mv gtk dracula
-# cd ..
-# mv .themes ~/.themes
 sudo apt install -y gnome-themes-extra adwaita-icon-theme
 echo "< GTK theme installed >"
 
