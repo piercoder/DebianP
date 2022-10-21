@@ -111,42 +111,42 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal/vertical orientation
-bindsym $mod+h split h; exec notify-send --expire-time 1000 'Tile horizontally'
-bindsym $mod+v split v; exec notify-send --expire-time 1000 'Tile vertically'
+# bindsym $mod+h split h; exec notify-send --expire-time 1000 'Tile horizontally'
+# bindsym $mod+v split v; exec notify-send --expire-time 1000 'Tile vertically'
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking; exec notify-send --expire-time 1000 'Stacking layout'
-bindsym $mod+w layout tabbed; exec notify-send --expire-time 1000 'Tabbed layout'
-bindsym $mod+e layout toggle split; exec notify-send --expire-time 1000 'Tiling layout'
+# bindsym $mod+s layout stacking; exec notify-send --expire-time 1000 'Stacking layout'
+# bindsym $mod+w layout tabbed; exec notify-send --expire-time 1000 'Tabbed layout'
+# bindsym $mod+e layout toggle split; exec notify-send --expire-time 1000 'Tiling layout'
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# mode "resize" {
+#        # These bindings trigger as soon as you enter the resize mode
+#        bindsym Left resize shrink width 10 px or 10 ppt
+#        bindsym Down resize grow height 10 px or 10 ppt
+#        bindsym Up resize shrink height 10 px or 10 ppt
+#        bindsym Right resize grow width 10 px or 10 ppt
+#
+#        # back to normal: $mod+r
+#        bindsym $mod+r mode "default"
+# }
 
-        # back to normal: $mod+r
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 #======================================================================#
 
 
@@ -159,7 +159,7 @@ set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
-set $ws5 "5:  5"
+set $ws5 "5: "
 set $ws6 "6:  6"
 set $ws7 "7:  7"
 set $ws8 "8:  8"
@@ -203,19 +203,19 @@ bindsym $mod+Return workspace $ws1; exec kitty
 bindsym $mod+Shift+Return exec kitty
 
 # Browser
-bindsym $mod+c workspace $ws2; exec google-chrome
+bindsym $mod+i workspace $ws2; exec google-chrome
 
 # Editor
-bindsym $mod+g workspace $ws3; exec geany
+bindsym $mod+e workspace $ws3; exec geany
 
 # File manager
-bindsym $mod+t workspace $ws4; exec thunar
+bindsym $mod+f workspace $ws4; exec thunar
 
 # dmenu (program launcher)
 bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
 # Keybind help
-bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
+# bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
 
 # Kill processes
 bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
@@ -231,6 +231,9 @@ bindsym $mod+Print exec flameshot gui
 
 # Lock by blurring the screen
 bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
+
+# Teams
+bindsym $mod+c workspace $ws5; exec teams
 #======================================================================#
 
 
