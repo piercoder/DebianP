@@ -233,7 +233,7 @@ bindsym $mod+Print exec flameshot gui
 bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
 
 # Teams
-bindsym $mod+c workspace $ws5; exec teams
+bindsym $mod+t workspace $ws5; exec teams
 #======================================================================#
 
 
