@@ -203,7 +203,7 @@ bindsym $mod+Return workspace $ws1; exec kitty
 bindsym $mod+Shift+Return exec kitty
 
 # Browser
-bindsym $mod+i workspace $ws2; exec google-chrome
+bindsym $mod+b workspace $ws2; exec google-chrome
 
 # Editor
 bindsym $mod+e workspace $ws3; exec geany
