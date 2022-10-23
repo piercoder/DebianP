@@ -11,10 +11,10 @@
 #----------------------------------------------------------------------#
 # Install NIX package manager
 #----------------------------------------------------------------------#
-curl -L https://nixos.org/nix/install | sh
-mkdir ~/.config/nixpkgs
-echo '{ allowUnfree = true; }' > ~/.config/nixpkgs/config.nix
-source ~/.nix-profile/etc/profile.d/nix.sh
+# curl -L https://nixos.org/nix/install | sh
+# mkdir ~/.config/nixpkgs
+# echo '{ allowUnfree = true; }' > ~/.config/nixpkgs/config.nix
+# source ~/.nix-profile/etc/profile.d/nix.sh
 #----------------------------------------------------------------------#
 
 #----------------------------------------------------------------------#
@@ -28,13 +28,13 @@ source ~/.nix-profile/etc/profile.d/nix.sh
 #----------------------------------------------------------------------#
 # Install packages
 #----------------------------------------------------------------------#
-nix-env -iA nixpkgs.teams nixpkgs.onlyoffice-bin
+# nix-env -iA nixpkgs.teams nixpkgs.onlyoffice-bin
 # flatpak -y install flathub com.dropbox.Client
 #----------------------------------------------------------------------#
 
 #----------------------------------------------------------------------#
 # Virtual manager
 #----------------------------------------------------------------------#
-sudo apt install virt-manager
-sudo usermod -a -G libvirt $(whoami)
+# sudo apt install virt-manager
+# sudo usermod -a -G libvirt $(whoami)
 #----------------------------------------------------------------------#
