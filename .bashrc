@@ -106,6 +106,8 @@ fi
 
 if [ -d "$HOME/.local/stata" ] ; then
     PATH="$PATH:$HOME/.local/stata"
+    alias xstata='xstata-se'
+
 fi
 #----------------------------------------------------------------------#
 
