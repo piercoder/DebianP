@@ -104,8 +104,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-if [ -d "/usr/local/stata" ] ; then
-    PATH="$PATH:/usr/local/stata"
+if [ -d "$HOME/.local/stata" ] ; then
+    PATH="$PATH:$HOME/.local/stata"
 fi
 #----------------------------------------------------------------------#
 
