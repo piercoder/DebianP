@@ -134,6 +134,7 @@ echo "< Utilities installed >"
 
 echo ""
 sudo apt install -y gtk2-engines-murrine
+# sudo apt install -y nvidia-driver
 echo "< Additional packages installed >"
 
 echo ""
