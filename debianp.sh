@@ -77,12 +77,17 @@ echo ""
 sudo apt install -y intel-microcode
 echo "< Microcode installed>"
 
+# Nvidia drivers
+echo ""
+sudo apt install -y nvidia-driver
+echo "< Nvidia drivers installed >"
+
 echo ""
 sudo apt install -y i3
 echo "< Window manager installed >"
 
 echo ""
-sudo apt install -y feh picom lxappearance fonts-font-awesome
+sudo apt install -y feh picom lxappearance
 echo "< Window manager utils installed >"
 
 echo ""
@@ -119,7 +124,7 @@ sudo apt install -y thunar gvfs-backends gvfs-fuse
 echo "< File manager installed >"
 
 echo ""
-sudo apt install -y geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck
+sudo apt install -y geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck geany-plugin-markdown
 echo "< Text editor installed >"
 
 echo ""
@@ -133,25 +138,21 @@ sudo apt install -y ristretto parole atril atril-common
 echo "< Utilities installed >"
 
 echo ""
-sudo apt install -y gtk2-engines-murrine
-# sudo apt install -y nvidia-driver
-echo "< Additional packages installed >"
-
-echo ""
 echo "< Desktop environment installed >"
 
 echo ""
-echo "--------------------------"
-echo "3 - Configuring the system"
-echo "--------------------------"
+echo "--------------------------------------"
+echo "3 - Configuring the system and theming"
+echo "--------------------------------------"
+
+echo ""
+sudo apt install -y gnome-themes-extra adwaita-icon-theme fonts-font-awesome gtk2-engines-murrine
+echo "< Fonts and GTK theme installed >"
+
 echo ""
 git clone https://gitlab.com/dwt1/wallpapers.git
 mv wallpapers ~/.wallpapers
 echo "< Wallpapers installed >"
-
-echo ""
-sudo apt install -y gnome-themes-extra adwaita-icon-theme
-echo "< GTK theme installed >"
 
 echo ""
 mkdir -p ~/.config/
