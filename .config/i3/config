@@ -182,8 +182,8 @@ bindsym $mod+t workspace $ws5; exec teams
 # dmenu (program launcher)
 bindsym $mod+space exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
-# dmenu (task launcher)
-bindsym $mod+x exec ~/.config/i3/dmenubin/commander
+# dmenu (common task launcher)
+bindsym $mod+x exec ~/.config/i3/dmenubin/tmenu
 
 # Power menu
 bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu

@@ -42,12 +42,17 @@ function findfile () {
 	find ~ | sed -e "s/'/\\\'/g" -e 's/\ /\\ /g' | sort -f | dmenu -i -p "Type to search ▶" $theme | xargs -r xdg-open
 }
 
+# Menu entries
+o1="    Show keyboard bindings"
+o2="    Kill a process"
+o3="    Find a file" 
+
 # Menu
-OPT=$(echo -e "Show keyboard bindings\nKill a process\nFind a file" | dmenu -i -p "Select an option ▶" $theme )
+OPT=$(echo -e "$o1\n$o2\n$o3" | dmenu -i -p "Select an option ▶" $theme )
 
 case $OPT in
-	"Show keyboard bindings") showkeybin ;;
-	"Kill a process") killproc ;;
-	"Find a file") findfile ;;
+	$o1) showkeybin ;;
+	$o2) killproc ;;
+	$o3) findfile ;;
 	*) ;;
 esac

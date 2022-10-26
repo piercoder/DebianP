@@ -20,13 +20,17 @@ font="FontAwesome-12"
 # Theme
 theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -fn $font"
 
-# Power-off menu
+# Menu entries
+o1="    Logout"
+o2="    Reboot"
+o3="    Poweroff" 
 
-OPT=$(echo -e " Logout\n Reboot\n Poweroff" | dmenu -i -p "Power menu ▶" $theme )
+# Power-off menu
+OPT=$(echo -e "$o1\n$o2\n$o3" | dmenu -i -p "Power menu ▶" $theme )
 
 case $OPT in
-	" Logout") i3-msg exit ;;
-	" Reboot") systemctl reboot ;;
-	" Poweroff") systemctl poweroff ;;
+	$o1) i3-msg exit ;;
+	$o2) systemctl reboot ;;
+	$o3) systemctl poweroff ;;
 	*) ;;
 esac
