@@ -110,43 +110,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal/vertical orientation
-# bindsym $mod+h split h; exec notify-send --expire-time 1000 'Tile horizontally'
-# bindsym $mod+v split v; exec notify-send --expire-time 1000 'Tile vertically'
-
-# enter fullscreen mode for the focused container
-# bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking; exec notify-send --expire-time 1000 'Stacking layout'
-# bindsym $mod+w layout tabbed; exec notify-send --expire-time 1000 'Tabbed layout'
-# bindsym $mod+e layout toggle split; exec notify-send --expire-time 1000 'Tiling layout'
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-# bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-# resize window (you can also use the mouse for that)
-# mode "resize" {
-#        # These bindings trigger as soon as you enter the resize mode
-#        bindsym Left resize shrink width 10 px or 10 ppt
-#        bindsym Down resize grow height 10 px or 10 ppt
-#        bindsym Up resize shrink height 10 px or 10 ppt
-#        bindsym Right resize grow width 10 px or 10 ppt
-#
-#        # back to normal: $mod+r
-#        bindsym $mod+r mode "default"
-# }
-
-# bindsym $mod+r mode "resize"
 #======================================================================#
 
 
@@ -214,9 +179,6 @@ bindsym $mod+f workspace $ws4; exec thunar
 # dmenu (program launcher)
 bindsym $mod+space exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
-# Keybind help
-# bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
-
 # Kill processes
 bindsym $mod+x exec ~/.config/i3/dmenubin/appkill
 
@@ -245,9 +207,6 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
-# exit i3
-# bindsym $mod+Shift+e exit
 #======================================================================#
 
 
