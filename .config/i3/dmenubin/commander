@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#======================================================================#
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	dmenu commander
+#======================================================================#
+
+
+# Colors
+background="#353535"
+foreground="#EEEEEC"
+critical="#15539E"
+
+# Style	
+lines="50"
+font="FontAwesome-12"
+
+# Theme
+theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -fn $font"
+
+
+# Show showkeybin
+function showkeybin () {
+	# Define the file path and name
+	FileName=~/.config/i3/config
+
+	# Perform several substitutions and display the output
+	grep 'bindsym $mod' $FileName | sed 's/bindsym //g' | sed -e 's/^[ \t]*//' | dmenu -i -p "Type to search ▶" $theme
+}
+
+# kill process
+function killproc () {
+	process=$(ps -A | dmenu -i -p "Type to search ▶" $theme | awk {'print $1'})
+	kill -9 $process 2>/dev/null
+}
+
+# Find a file
+function findfile () {
+	find ~ | sed -e "s/'/\\\'/g" -e 's/\ /\\ /g' | sort -f | dmenu -i -p "Type to search ▶" $theme | xargs -r xdg-open
+}
+
+# Menu
+OPT=$(echo -e "Show keyboard bindings\nKill a process\nFind a file" | dmenu -i -p "Select an option ▶" $theme )
+
+case $OPT in
+	"Show keyboard bindings") showkeybin ;;
+	"Kill a process") killproc ;;
+	"Find a file") findfile ;;
+	*) ;;
+esac
