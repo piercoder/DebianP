@@ -212,7 +212,7 @@ bindsym $mod+e workspace $ws3; exec geany
 bindsym $mod+f workspace $ws4; exec thunar
 
 # dmenu (program launcher)
-bindsym $mod+d exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
+bindsym $mod+space exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
 # Keybind help
 # bindsym $mod+k exec ~/.config/i3/dmenubin/showkey
