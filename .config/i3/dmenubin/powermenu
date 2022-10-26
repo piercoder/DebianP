@@ -22,11 +22,11 @@ theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -
 
 # Power-off menu
 
-OPT=$(echo -e "Logout\nPoweroff\nReboot" | dmenu -i -p "Power menu ▶" $theme )
+OPT=$(echo -e " Logout\n Reboot\n Poweroff" | dmenu -i -p "Power menu ▶" $theme )
 
 case $OPT in
-	Logout) i3-msg exit ;;
-	Poweroff) systemctl poweroff ;;
-	Reboot) systemctl reboot ;;
+	" Logout") i3-msg exit ;;
+	" Reboot") systemctl reboot ;;
+	" Poweroff") systemctl poweroff ;;
 	*) ;;
 esac

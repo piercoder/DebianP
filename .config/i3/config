@@ -196,7 +196,7 @@ bindsym $mod+Next scratchpad show
 
 
 #======================================================================#
-# Keyboard bindings
+# Application keyboard bindings
 #======================================================================#
 # Terminal
 bindsym $mod+Return workspace $ws1; exec kitty
@@ -247,7 +247,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3
-bindsym $mod+Shift+e exit
+# bindsym $mod+Shift+e exit
 #======================================================================#
 
 
