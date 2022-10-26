@@ -176,6 +176,9 @@ bindsym $mod+e workspace $ws3; exec geany
 # File manager
 bindsym $mod+f workspace $ws4; exec thunar
 
+# Teams
+bindsym $mod+t workspace $ws5; exec teams
+
 # dmenu (program launcher)
 bindsym $mod+space exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
 
@@ -193,9 +196,6 @@ bindsym $mod+Print exec flameshot gui
 
 # Lock by blurring the screen
 bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
-
-# Teams
-bindsym $mod+t workspace $ws5; exec teams
 #======================================================================#
 
 
