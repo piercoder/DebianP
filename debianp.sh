@@ -134,7 +134,7 @@ rm chrome.deb
 echo "< Browser installed >"
 
 echo ""
-sudo apt install -y ristretto parole atril atril-common
+sudo apt install -y ristretto parole atril atril-common thunderbird
 echo "< Utilities installed >"
 
 echo ""
