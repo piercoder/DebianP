@@ -188,7 +188,7 @@ bindsym $mod+space exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$cri
 # dmenu (common task launcher)
 bindsym $mod+x exec ~/.config/i3/dmenubin/tmenu
 
-# Power menu
+# dmenu (power menu)
 bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
 
 # Screenshot
