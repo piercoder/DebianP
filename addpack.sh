@@ -8,6 +8,10 @@
 #	Add additional packages
 #======================================================================#
 
+# DEB Onlyoffice: https://www.onlyoffice.com/it/download-desktop.aspx
+# DEB teams: https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
+# DEB dropbox: 
+
 #----------------------------------------------------------------------#
 # Install NIX package manager
 #----------------------------------------------------------------------#
@@ -28,8 +32,8 @@
 #----------------------------------------------------------------------#
 # Install packages
 #----------------------------------------------------------------------#
-# nix-env -iA nixpkgs.teams nixpkgs.onlyoffice-bin
-# flatpak -y install flathub com.dropbox.Client
+# nix-env -iA PKG_NAME
+# flatpak -y install flathub PKG_NAME_ON_FLATHUB
 #----------------------------------------------------------------------#
 
 #----------------------------------------------------------------------#
