@@ -12,6 +12,7 @@
 # DEB teams: https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
 # DEB dropbox: https://www.dropbox.com/install
 # First time launch: dropbox start -i
+# TbSync extension for thunderbird for outlook365 calendar
 
 #----------------------------------------------------------------------#
 # Install NIX package manager
