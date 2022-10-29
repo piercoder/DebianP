@@ -10,7 +10,8 @@
 
 # DEB Onlyoffice: https://www.onlyoffice.com/it/download-desktop.aspx
 # DEB teams: https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
-# DEB dropbox: 
+# DEB dropbox: https://www.dropbox.com/install
+# First time launch: dropbox start -i
 
 #----------------------------------------------------------------------#
 # Install NIX package manager
