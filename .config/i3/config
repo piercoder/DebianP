@@ -201,7 +201,7 @@ bindsym $mod+l exec ~/.config/i3/i3bin/blurlock
 
 
 #======================================================================#
-# Reload/restart/exit i3
+# Reload/restart i3
 #======================================================================#
 # reload the configuration file
 bindsym $mod+Shift+c reload
