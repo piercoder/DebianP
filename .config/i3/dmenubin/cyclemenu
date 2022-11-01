@@ -23,6 +23,6 @@ theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -
 
 class=$(i3-msg -t get_tree | \
 	egrep -o "(class\":\".[^\"]+)" | \
-    sed '/i3bar/d;s/class":"//g' | dmenu -i -p "Choose an application ▶" $theme) 
+    sed '/i3bar/d;s/class":"//g' | dmenu -i -p "Jump to an application ▶" $theme) 
     
 i3-msg [class="$class"] focus 2>/dev/null
