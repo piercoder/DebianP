@@ -15,9 +15,10 @@
 set $mod Mod4
 
 # Colors
-set $background #353535
-set $foreground #EEEEEC
-set $critical #15539E
+set $color1 #fe8019
+set $color2 #282828
+set $color3 #ebdbb2
+set $color4 #fb4934
 #======================================================================#
 
 
@@ -35,20 +36,20 @@ exec_always --no-startup-id feh --bg-fill --randomize ~/.wallpapers/*
 exec --no-startup-id picom --config ~/.config/.picom.conf
 
 # Window colors
-# class border bground text indicator child_border
-client.focused $foreground $background $foreground $foreground $foreground
-client.focused_inactive $background $background $foreground $background $background
-client.unfocused $background $background $foreground $background $background
-client.urgent $critical $critical $background $critical $critical
-client.placeholder $background $background $foreground $background $background
-client.background $background
+# class					border bground text indicator child_border
+client.focused			$color1 $color1 $color2 $color1 $color1
+client.focused_inactive $color1 $color1 $color2 $color1 $color1
+client.unfocused 		$color2 $color2 $color3 $color2 $color2
+client.urgent 			$color4 $color4 $color2 $color4 $color4
+client.placeholder 		$color2 $color2 $color3 $color2 $color2
+client.background 		$color2
 
 # Window title alignment
 title_align center
 
 # No title bar
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 3
+default_floating_border pixel 3
 #======================================================================#
 
 
@@ -63,7 +64,7 @@ exec_always --no-startup-id ~/.local/bin/i3altlayout
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color=353535
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color=000000
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -190,7 +191,7 @@ bindsym $mod+t workspace $ws5; exec teams
 bindsym $mod+m workspace $ws6; exec thunderbird
 
 # dmenu (program launcher)
-bindsym $mod+space exec "dmenu_run -nf '$foreground' -nb '$background' -sb '$critical' -sf '$foreground' -fn 'FontAwesome-12' -p 'Type to search ▶'"
+bindsym $mod+space exec ~/.config/i3/dmenubin/lmenu
 
 # dmenu (common task launcher)
 bindsym $mod+x exec ~/.config/i3/dmenubin/tmenu
@@ -232,16 +233,16 @@ bar {
 
 
 		colors {
-			background $background
-			statusline $foreground
-			separator $foreground
+			background $color2
+			statusline $color3
+			separator $color3
 
-			# border background text
-			focused_workspace $critical $critical $foreground			
-			active_workspace $background $background $foreground
-			inactive_workspace $background $background $foreground
-			urgent_workspace $foreground $foreground $critical
-			binding_mode $foreground $foreground $critical
+								# border background text
+			focused_workspace	$color1 $color1 $color2			
+			active_workspace	$color1 $color1 $color2	
+			inactive_workspace	$color2 $color2 $color3	
+			urgent_workspace	$color4 $color4 $color2	
+			binding_mode		$color4 $color4 $color2	
 		}
 }
 #======================================================================#

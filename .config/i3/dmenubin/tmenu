@@ -10,17 +10,15 @@
 
 
 # Colors
-background="#353535"
-foreground="#EEEEEC"
-critical="#15539E"
+color1="#fe8019"
+color2="#282828"
 
-# Style	
+# Style
 lines="50"
-font="FontAwesome-12"
+font="FontAwesome-13"
 
 # Theme
-theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -fn $font"
-
+theme="-l $lines -nf $color1 -nb $color2 -sb $color1 -sf $color2 -fn $font"
 
 # Show showkeybin
 function showkeybin () {

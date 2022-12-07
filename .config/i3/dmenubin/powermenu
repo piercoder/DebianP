@@ -5,20 +5,19 @@
 #	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
 #	|    | |___ |  \    \__, \__/ |__/ |___ |  \
 #
-#	dmenu power-off menu
+#	dmenu power menu
 #======================================================================#
 
 # Colors
-background="#353535"
-foreground="#EEEEEC"
-critical="#15539E"
+color1="#fe8019"
+color2="#282828"
 
 # Style
-lines="3"
-font="FontAwesome-12"
+lines="50"
+font="FontAwesome-13"
 
 # Theme
-theme="-l $lines -nf $foreground -nb $background -sb $critical -sf $foreground -fn $font"
+theme="-l $lines -nf $color1 -nb $color2 -sb $color1 -sf $color2 -fn $font"
 
 # Menu entries
 o1="    Logout"
