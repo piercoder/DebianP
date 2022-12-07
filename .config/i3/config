@@ -30,7 +30,8 @@ set $color4 #fb4934
 font pango:FontAwesome 12
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill --randomize ~/.wallpapers/*
+#exec_always --no-startup-id feh --bg-fill --randomize ~/.wallpapers/*
+exec --no-startup-id feh --bg-fill ~/.wallpapers/bg.jpg
 
 # Transparency
 exec --no-startup-id picom --config ~/.config/.picom.conf
