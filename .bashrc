@@ -247,3 +247,4 @@ alias gitup='git add . && git commit -m "Update: $(date)" && git push'
 #echo ""
 #----------------------------------------------------------------------#
 
+eval "$(starship init bash)"
