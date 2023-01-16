@@ -68,7 +68,7 @@ echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
-sudo apt install -y man wget curl neofetch deborphan command-not-found
+sudo apt install -y man wget curl neofetch deborphan command-not-found tldr
 echo "< System utitlities installed >"
 
 # Microcode for AMD/Intel
@@ -124,7 +124,7 @@ sudo apt install -y thunar gvfs-backends gvfs-fuse
 echo "< File manager installed >"
 
 echo ""
-sudo apt install -y geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck apostrophe
+sudo apt install -y neovim geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck apostrophe
 echo "< Text editor installed >"
 
 echo ""
@@ -150,8 +150,8 @@ sudo apt install -y gnome-themes-extra adwaita-icon-theme fonts-font-awesome gtk
 echo "< Fonts and GTK theme installed >"
 
 echo ""
-git clone https://gitlab.com/dwt1/wallpapers.git
-mv wallpapers ~/.wallpapers
+mkdir -p ~/.wallpapers
+cp bg.jpg ~/.wallpapers
 echo "< Wallpapers installed >"
 
 echo ""
