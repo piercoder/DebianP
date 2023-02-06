@@ -70,6 +70,9 @@ smart_gaps inverse_outer
 # Start XDG autostart .desktop files using dex. See also
 exec --no-startup-id dex --autostart --environment i3
 
+# Authentication
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
 # Autotiling
 exec_always --no-startup-id ~/.local/bin/i3altlayout
 
