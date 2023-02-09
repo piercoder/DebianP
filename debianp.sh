@@ -173,6 +173,11 @@ rm -rf geanythemes
 echo "< Geany themes installed >"
 
 echo ""
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+echo "< Neovim config installed >"
+
+echo ""
 clean
 echo "< System configured >"
 
