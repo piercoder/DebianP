@@ -128,6 +128,11 @@ sudo apt install -y neovim geany geany-common geany-plugin-git-changebar geany-p
 echo "< Text editor installed >"
 
 echo ""
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+echo "< Neovim package manager installed >"
+
+echo ""
 wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./chrome.deb
 rm chrome.deb
@@ -155,9 +160,14 @@ cp bg.jpg ~/.wallpapers
 echo "< Wallpapers installed >"
 
 echo ""
+curl -sS https://starship.rs/install.sh | sh
+echo "< Starshipt prompt installed>"
+
+echo ""
 mkdir -p ~/.config/
 ln -s ~/DebianP/.config/* ~/.config/
 ln -s ~/DebianP/.config/.picom.conf ~/.config/
+ln -s ~/DebianP/.config/starship.toml ~/.config/
 rm ~/.bashrc
 ln -s ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"
@@ -171,11 +181,6 @@ mv geany-themes/colorschemes/*.conf ~/.config/geany/colorschemes/
 cd ..
 rm -rf geanythemes
 echo "< Geany themes installed >"
-
-echo ""
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-echo "< Neovim config installed >"
 
 echo ""
 clean
