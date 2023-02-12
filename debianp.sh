@@ -167,7 +167,8 @@ echo ""
 mkdir -p ~/.config/
 ln -s ~/DebianP/.config/* ~/.config/
 ln -s ~/DebianP/.config/.picom.conf ~/.config/
-ln -s ~/DebianP/.config/starship.toml ~/.config/
+mkdir -p ~/.config/nvim
+ln -s ~/DebianP/init.vim ~/.config/nvim/
 rm ~/.bashrc
 ln -s ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"
