@@ -1,1 +1,0 @@
-/home/pier/DebianP/init.vim
