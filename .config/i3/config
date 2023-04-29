@@ -193,7 +193,6 @@ bindsym $mod+b workspace $ws2; exec google-chrome
 
 # Editor
 bindsym $mod+e workspace $ws3; exec geany
-bindsym $mod+n workspace $ws3; exec apostrophe
 
 # File manager
 bindsym $mod+f workspace $ws4; exec thunar
