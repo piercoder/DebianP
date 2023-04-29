@@ -7,14 +7,14 @@
 #======================================================================#
 
 format = """
-[](#d79921)\
+[](#ffffff)\
 $username\
-[](bg:#689d6a fg:#d79921)\
+[](bg:#0f52ba fg:#ffffff)\
 $directory\
-[](fg:#689d6a bg:#458588)\
+[](fg:#0f52ba bg:#ffffff)\
 $git_branch\
 $git_status\
-[ ](fg:#458588)\
+[ ](fg:#ffffff)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -23,12 +23,12 @@ add_newline = false
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#d79921"
-style_root = "bg:#d79921"
+style_user = "bg:#ffffff"
+style_root = "bg:#ffffff"
 format = '[  ]($style)'
 
 [directory]
-style = "bg:#689d6a"
+style = "bg:#0f52ba"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "[ … ]"
@@ -43,9 +43,9 @@ truncation_symbol = "[ … ]"
 
 [git_branch]
 symbol = ""
-style = "bg:#458588"
+style = "bg:#ffffff"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#458588"
+style = "bg:#ffffff"
 format = '[$all_status$ahead_behind ]($style)'
