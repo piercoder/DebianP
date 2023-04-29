@@ -15,10 +15,10 @@
 set $mod Mod4
 
 # Colors (accent, dark, light, urgent)
-set $color1 #d79921 
-set $color2 #282828 
-set $color3 #ebdbb2
-set $color4 #cc241d
+set $color1 #818181 
+set $color2 #212124 
+set $color3 #ffffff
+set $color4 #FFA500
 #======================================================================#
 
 
@@ -38,10 +38,10 @@ exec --no-startup-id picom --config ~/.config/.picom.conf
 
 # Window colors
 # class				    border bground text indicator child_border
-client.focused			$color1 $color1 $color2 $color1 $color1
+client.focused			$color1 $color1 $color3 $color1 $color1
 client.focused_inactive $color2 $color2 $color3 $color2 $color2
 client.unfocused 		$color2 $color2 $color3 $color2 $color2
-client.urgent 			$color4 $color4 $color2 $color4 $color4
+client.urgent 			$color4 $color4 $color3 $color4 $color4
 client.placeholder 		$color2 $color2 $color3 $color2 $color2
 client.background 		$color2
 
@@ -251,11 +251,11 @@ bar {
 			separator $color3
 
 								# border background text
-			focused_workspace	$color1 $color1 $color2			
-			active_workspace	$color1 $color1 $color2	
+			focused_workspace	$color1 $color1 $color3			
+			active_workspace	$color1 $color1 $color3	
 			inactive_workspace	$color2 $color2 $color3	
-			urgent_workspace	$color4 $color4 $color2	
-			binding_mode		$color4 $color4 $color2	
+			urgent_workspace	$color4 $color4 $color3	
+			binding_mode		$color4 $color4 $color3	
 		}
 }
 #======================================================================#
