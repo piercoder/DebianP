@@ -1,10 +1,12 @@
-# Colors
-color1="#d79921"
-color2="#282828"
+# Colors (accent, dark, light, urgent)
+color1="#818181" 
+color2="#212124" 
+color3="#ffffff"
+color4="#0F52BA"
 
 # Style
 lines="50"
 font="FontAwesome-15"
 
 # Theme
-theme="-l $lines -nf $color1 -nb $color2 -sb $color1 -sf $color2 -fn $font"
+theme="-l $lines -nf $color1 -nb $color2 -sb $color4 -sf $color3 -fn $font"

@@ -12,4 +12,4 @@
 # Theme
 source $(dirname "$0")/style
 
-dmenu_run -l $lines -nf $color1 -nb $color2 -sb $color1 -sf $color2 -fn $font -p 'Type to search ▶'
+dmenu_run $theme -p 'Type to search ▶'
