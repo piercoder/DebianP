@@ -8,6 +8,8 @@ $git_branch\
 $git_status\
 [](fg:#818181)\
 """
+# Disable the blank line at the start of the prompt
+add_newline = false
 
 [directory]
 style = "fg:#ffffff bg:#0f52ba"
