@@ -1,51 +1,31 @@
-#======================================================================#
-#	 __     ___  __      __   __   __   ___  __  
-#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__) 
-#	|    | |___ |  \    \__, \__/ |__/ |___ |  \ 
-#	
-#	my starship configuration file                                             
-#======================================================================#
-
 format = """
-[](#ffffff)\
-$username\
-[](bg:#0f52ba fg:#ffffff)\
+[](#818181)\
+[  ](bg:#818181 fg:#212124)\
+[](bg:#0f52ba fg:#818181)\
 $directory\
-[](fg:#0f52ba bg:#ffffff)\
+[](fg:#0f52ba bg:#818181)\
 $git_branch\
 $git_status\
-[ ](fg:#ffffff)\
+[](fg:#818181)\
 """
 
-# Disable the blank line at the start of the prompt
-add_newline = false
-
-# You can also replace your username with a neat symbol like  to save some space
-[username]
-show_always = true
-style_user = "bg:#ffffff"
-style_root = "bg:#ffffff"
-format = '[  ]($style)'
-
 [directory]
-style = "bg:#0f52ba"
+style = "fg:#ffffff bg:#0f52ba"
 format = "[ $path ]($style)"
 truncation_length = 3
-truncation_symbol = "[ … ]"
+truncation_symbol = "…/"
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-"Documents" = ""
-"Downloads" = ""
-"Music" = ""
-"Pictures" = ""
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
 [git_branch]
 symbol = ""
-style = "bg:#ffffff"
-format = '[ $symbol $branch ]($style)'
+style = "bg:#818181"
+format = '[[ $symbol $branch ](fg:#212124 bg:#818181)]($style)'
 
 [git_status]
-style = "bg:#ffffff"
-format = '[$all_status$ahead_behind ]($style)'
+style = "bg:#818181"
+format = '[[($all_status$ahead_behind )](fg:#212124 bg:#818181)]($style)'
