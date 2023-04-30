@@ -6,7 +6,7 @@ $directory\
 [](fg:#0f52ba bg:#818181)\
 $git_branch\
 $git_status\
-[](fg:#818181)\
+[ ](fg:#818181)\
 """
 # Disable the blank line at the start of the prompt
 add_newline = false
