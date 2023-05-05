@@ -1,8 +1,8 @@
 # Colors (accent, dark, light, urgent)
-color1="#818181" 
-color2="#212124" 
-color3="#ffffff"
-color4="#0F52BA"
+color1="#888b8b" 
+color2="#232729" 
+color3="#e5e6e6"
+color4="#215d9c"
 
 # Style
 lines="50"

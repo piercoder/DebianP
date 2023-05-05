@@ -1,18 +1,18 @@
 format = """
-[](#818181)\
-[  ](bg:#818181 fg:#212124)\
-[](bg:#0f52ba fg:#818181)\
+[](#888b8b)\
+[  ](bg:#888b8b fg:#232729)\
+[](bg:#215d9c fg:#888b8b)\
 $directory\
-[](fg:#0f52ba bg:#818181)\
+[](fg:#215d9c bg:#888b8b)\
 $git_branch\
 $git_status\
-[ ](fg:#818181)\
+[ ](fg:#888b8b)\
 """
 # Disable the blank line at the start of the prompt
 add_newline = false
 
 [directory]
-style = "fg:#ffffff bg:#0f52ba"
+style = "fg:#ffffff bg:#215d9c"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -25,9 +25,9 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#818181"
-format = '[[ $symbol $branch ](fg:#212124 bg:#818181)]($style)'
+style = "bg:#888b8b"
+format = '[[ $symbol $branch ](fg:#232729 bg:#888b8b)]($style)'
 
 [git_status]
-style = "bg:#818181"
-format = '[[($all_status$ahead_behind )](fg:#212124 bg:#818181)]($style)'
+style = "bg:#888b8b"
+format = '[[($all_status$ahead_behind )](fg:#232729 bg:#888b8b)]($style)'

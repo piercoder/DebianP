@@ -14,11 +14,11 @@
 # Mod
 set $mod Mod4
 
-# Colors (accent, dark, light, urgent)
-set $color1 #818181 
-set $color2 #212124 
-set $color3 #ffffff
-set $color4 #0F52BA
+# Colors (light, dark, ultra-light, accent)
+set $color1 #888b8b 
+set $color2 #232729 
+set $color3 #e5e6e6
+set $color4 #215d9c
 #======================================================================#
 
 
