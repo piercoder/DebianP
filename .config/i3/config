@@ -14,6 +14,14 @@
 # Mod
 set $mod Mod4
 
+# Applications
+set $term kitty
+set $browser google-chrome
+set $editor geany
+set $fileman thunar
+set $communic teams
+set $email thunderbird
+
 # Colors (neutral, dark, light, accent)
 set $neutral #abb2bf
 set $dark #282c34
@@ -185,23 +193,23 @@ bindsym $mod+Next scratchpad show
 # Application keyboard bindings
 #======================================================================#
 # Terminal
-bindsym $mod+Return workspace $ws1; exec kitty
-bindsym $mod+Shift+Return exec kitty
+bindsym $mod+Return workspace $ws1; exec $term
+bindsym $mod+Shift+Return exec $term
 
 # Browser
-bindsym $mod+b workspace $ws2; exec google-chrome
+bindsym $mod+b workspace $ws2; exec $browser
 
 # Editor
-bindsym $mod+e workspace $ws3; exec geany
+bindsym $mod+e workspace $ws3; exec $editor
 
 # File manager
-bindsym $mod+f workspace $ws4; exec thunar
+bindsym $mod+f workspace $ws4; exec $fileman
 
 # Teams
-bindsym $mod+t workspace $ws5; exec teams
+bindsym $mod+t workspace $ws5; exec $communic
 
 # Email
-bindsym $mod+m workspace $ws6; exec thunderbird
+bindsym $mod+m workspace $ws6; exec $email
 
 # dmenu (program launcher)
 bindsym $mod+space exec ~/.config/i3/dmenubin/lmenu
