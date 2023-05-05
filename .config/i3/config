@@ -18,7 +18,7 @@ set $mod Mod4
 set $neutral #8e8e93
 set $dark #3a3a3c
 set $light #f2f2f7
-set $accent #0a84ff
+set $accent #ff9f0a
 #======================================================================#
 
 
