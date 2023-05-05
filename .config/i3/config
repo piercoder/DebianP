@@ -251,11 +251,11 @@ bar {
 			separator $color1
 
 								# border background text
-			focused_workspace	$color1 $color4 $color3			
-			active_workspace	$color1 $color4 $color1	
+			focused_workspace	$color4 $color1 $color4			
+			active_workspace	$color1 $color2 $color1	
 			inactive_workspace	$color2 $color2 $color1
-			urgent_workspace	$color1 $color3 $color4	
-			binding_mode		$color1 $color3 $color4	
+			urgent_workspace	$color3 $color4 $color3	
+			binding_mode		$color3 $color4 $color3	
 		}
 }
 #======================================================================#
