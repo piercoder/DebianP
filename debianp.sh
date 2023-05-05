@@ -161,7 +161,7 @@ echo "< Wallpapers installed >"
 
 echo ""
 curl -sS https://starship.rs/install.sh | sh
-echo "< Starshipt prompt installed>"
+echo "< Starshipt prompt installed >"
 
 echo ""
 mkdir -p ~/.config/
