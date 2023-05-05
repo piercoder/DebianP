@@ -15,10 +15,10 @@
 set $mod Mod4
 
 # Colors (neutral, dark, light, accent)
-set $neutral #8e8e93
-set $dark #3a3a3c
-set $light #f2f2f7
-set $accent #ff9f0a
+set $neutral #abb2bf
+set $dark #282c34
+set $light #ffffff
+set $accent #61afef
 #======================================================================#
 
 
@@ -238,7 +238,7 @@ bindsym $mod+Shift+r restart
 # i3 bar configuration
 #======================================================================#
 bar {
-		position top
+        position top
         status_command i3status --config ~/.config/i3/i3status.conf
         separator_symbol " "
 
@@ -251,8 +251,8 @@ bar {
 			separator $neutral
 
 								# border background text
-			focused_workspace	$neutral $neutral $accent			
-			active_workspace	$neutral $neutral $dark	
+			focused_workspace	$neutral $neutral $dark			
+			active_workspace	$neutral $neutral $accent	
 			inactive_workspace	$dark $dark $neutral
 			urgent_workspace	$neutral $neutral $light	
 			binding_mode		$neutral $neutral $light	

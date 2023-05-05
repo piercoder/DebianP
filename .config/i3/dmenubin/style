@@ -1,8 +1,8 @@
 # Colors (accent, dark, light, urgent)
-neutral="#8e8e93"
-dark="#3a3a3c"
-light="#f2f2f7"
-accent="#ff9f0a"
+neutral="#abb2bf"
+dark="#282c34"
+light="#ffffff"
+accent="#61afef"
 
 # Style
 lines="50"

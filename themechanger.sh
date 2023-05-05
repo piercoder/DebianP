@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define the new color scheme
-neutral="#8e8e93"
-dark="#3a3a3c"
-light="#f2f2f7"
-accent="#ff9f0a"
+neutral="#abb2bf"
+dark="#282c34"
+light="#ffffff"
+accent="#61afef"
 
 # Current directory
 wd=$(pwd)
