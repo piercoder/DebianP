@@ -4,39 +4,10 @@
 neutral="#8e8e93"
 dark="#3a3a3c"
 light="#f2f2f7"
-accent="#409cff"
+accent="#0a84ff"
 
 # Current directory
 wd=$(pwd)
-
-# kitty
-# Define the file path of the text file
-file_path="$(pwd)/.config/kitty/kitty.conf"
-
-# Substitute background
-start_text="background "
-new_text="background $dark"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute foreground
-start_text="foreground"
-new_text="foreground $neutral"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute cursor
-start_text="cursor"
-new_text="cursor $accent"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute selection background
-start_text="selection_background"
-new_text="selection_background $accent"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute selection foreground
-start_text="selection_foreground"
-new_text="selection_foreground $background"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
 
 
 
@@ -67,8 +38,10 @@ new_text="accent=\"$accent\""
 sed -i "/^${start_text}/c${new_text}" ${file_path}
 
 
-# i3 config file
 
+
+
+# i3 config file
 # Define the file path of the text file
 file_path="$(pwd)/.config/i3/config"
 
