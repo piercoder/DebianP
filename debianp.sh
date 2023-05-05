@@ -79,7 +79,7 @@ echo "< Microcode installed>"
 
 # Nvidia drivers
 echo ""
-sudo apt install -y nvidia-driver
+#sudo apt install -y nvidia-driver
 echo "< Nvidia drivers installed >"
 
 echo ""
@@ -165,12 +165,12 @@ echo "< Starshipt prompt installed>"
 
 echo ""
 mkdir -p ~/.config/
-ln -s ~/DebianP/.config/* ~/.config/
-ln -s ~/DebianP/.config/.picom.conf ~/.config/
+ln -sf ~/DebianP/.config/* ~/.config/
+ln -sf ~/DebianP/.config/.picom.conf ~/.config/
 mkdir -p ~/.config/nvim
-ln -s ~/DebianP/init.vim ~/.config/nvim/
+ln -sf ~/DebianP/init.vim ~/.config/nvim/
 rm ~/.bashrc
-ln -s ~/DebianP/.bashrc ~/
+ln -sf ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"
 
 echo ""
