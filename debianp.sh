@@ -79,7 +79,7 @@ echo "< Microcode installed>"
 
 # Nvidia drivers
 echo ""
-#sudo apt install -y nvidia-driver
+# sudo apt install -y nvidia-driver
 echo "< Nvidia drivers installed >"
 
 echo ""
@@ -90,10 +90,11 @@ echo ""
 sudo apt install -y feh picom lxappearance
 echo "< Window manager utils installed >"
 
-echo ""
-sudo apt install -y python3-pip
-pip3 install i3altlayout
-echo "< Autotiling module installed >"
+# echo ""
+# sudo apt install -y pipx
+# pipx install i3altlayout
+# pipx ensurepath
+# echo "< Autotiling module installed >"
 
 echo ""
 sudo apt install -y lightdm slick-greeter lightdm-settings

@@ -22,7 +22,7 @@ set $fileman thunar
 set $communic teams
 set $email thunderbird
 
-# Colors (neutral, dark, light, accent)
+# Colors
 set $neutral #abb2bf
 set $dark #282c34
 set $light #ffffff
@@ -82,7 +82,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
 # Autotiling
-exec_always --no-startup-id ~/.local/bin/i3altlayout
+# exec_always --no-startup-id i3altlayout
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

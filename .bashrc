@@ -248,3 +248,6 @@ alias gitup='git add . && git commit -m "Update: $(date)" && git push'
 #----------------------------------------------------------------------#
 
 eval "$(starship init bash)"
+
+# Created by `pipx` on 2023-05-06 09:14:04
+export PATH="$PATH:/home/pier/.local/bin"
