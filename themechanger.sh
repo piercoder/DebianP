@@ -51,18 +51,18 @@ sed -i "/^${start_text}/c${new_text}" ${file_path}
 file_path="$(pwd)/.config/dunst/dunstrc"
 
 # Frame color
-start_text="    frame_color = "
-new_text="    frame_color = \"$neutral\""
+start_text="frame_color = "
+new_text="frame_color = \"$neutral\""
 sed -i "/^${start_text}/c${new_text}" ${file_path}
 
 # Substitute background color
-start_text="    background "
-new_text="dark=\"$dark\""
+start_text="background "
+new_text="background = \"$dark\""
 sed -i "/^${start_text}/c${new_text}" ${file_path}
 
 # Substitute foreground color
-start_text="    foreground "
-new_text="light=\"$light\""
+start_text="foreground "
+new_text="foreground = \"$neutral\""
 sed -i "/^${start_text}/c${new_text}" ${file_path}
 
 
