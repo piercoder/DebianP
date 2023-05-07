@@ -6,117 +6,15 @@ dark="#282c34"
 light="#ffffff"
 accent="#61afef"
 
-# Current directory
-wd=$(pwd)
+# Define file paths and corresponding sed commands
+declare -A files=(
+    ["$(pwd)/.config/kitty/kitty.conf"]="s/^foreground.*/foreground $neutral/;s/^background\s.*/background $dark/;s/^selection_foreground.*/selection_foreground $dark/;s/^selection_background.*/selection_background $accent/;s/^cursor.*/cursor $accent/"
+    ["$(pwd)/.config/dunst/dunstrc"]="s/^frame_color.*/frame_color = \"$neutral\"/;s/^background\s.*/background = \"$dark\"/;s/^foreground.*/foreground = \"$neutral\"/"
+    ["$(pwd)/.config/i3/dmenubin/style"]="s/^neutral.*/neutral=\"$neutral\"/;s/^dark.*/dark=\"$dark\"/;s/^light.*/light=\"$light\"/;s/^accent.*/accent=\"$accent\"/"
+    ["$(pwd)/.config/i3/config"]="s/^set \$neutral.*/set \$neutral $neutral/;s/^set \$dark.*/set \$dark $dark/;s/^set \$light.*/set \$light $light/;s/^set \$accent.*/set \$accent $accent/"
+)
 
-
-
-
-
-# kitty
-# Define the file path of the text file
-file_path="$(pwd)/.config/kitty/kitty.conf"
-
-# Foreground
-start_text="foreground "
-new_text="foreground $neutral"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Background
-start_text="background "
-new_text="background $dark"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Selection foreground
-start_text="selection_foreground "
-new_text="selection_foreground $dark"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Selection background
-start_text="selection_background "
-new_text="selection_background $accent"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Cursor
-start_text="cursor "
-new_text="cursor $accent"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-
-
-
-
-# dunst
-# Define the file path of the text file
-file_path="$(pwd)/.config/dunst/dunstrc"
-
-# Frame color
-start_text="frame_color = "
-new_text="frame_color = \"$neutral\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute background color
-start_text="background "
-new_text="background = \"$dark\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute foreground color
-start_text="foreground "
-new_text="foreground = \"$neutral\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-
-
-
-
-# dmenu style
-# Define the file path of the text file
-file_path="$(pwd)/.config/i3/dmenubin/style"
-
-# Substitute the neutral color
-start_text="neutral"
-new_text="neutral=\"$neutral\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute the dark color
-start_text="dark"
-new_text="dark=\"$dark\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute the light color
-start_text="light"
-new_text="light=\"$light\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute the accent color
-start_text="accent"
-new_text="accent=\"$accent\""
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-
-
-
-
-# i3 config file
-# Define the file path of the text file
-file_path="$(pwd)/.config/i3/config"
-
-# Substitute the neutral color
-start_text="set \$neutral"
-new_text="set \$neutral $neutral"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute the dark color
-start_text="set \$dark"
-new_text="set \$dark $dark"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute the light color
-start_text="set \$light"
-new_text="set \$light $light"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
-
-# Substitute the accent color
-start_text="set \$accent"
-new_text="set \$accent $accent"
-sed -i "/^${start_text}/c${new_text}" ${file_path}
+# Loop through the files and sed commands to make changes
+for file in "${!files[@]}"; do
+    sed -i -e "${files[$file]}" "$file"
+done
