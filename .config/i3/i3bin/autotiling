@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# Regular expression to match the aspect ratio of a window
 readonly ASPECT_RATIO_REGEX='([0-9]+)x([0-9]+)'
+
+# Log file path for error messages
 readonly LOG_FILE='/var/log/autotiling.log'
 
+# Function to log messages to the log file
 log() {
     echo "$(date +'%Y-%m-%d %H:%M:%S') $*" >> "$LOG_FILE"
 }
 
+# Function to update the split direction based on the aspect ratio of the focused window
 update_split() {
     local output window_width window_height
     if output=$(xdotool getwindowfocus getwindowgeometry 2>/dev/null); then
@@ -24,16 +29,21 @@ update_split() {
     fi
 }
 
+# Check if i3 is running
 if ! pidof i3 >/dev/null; then
     log 'i3 is not running, exiting'
     exit 1
 fi
 
+# Monitor changes in the active window and update the split direction if necessary
 while read -r _; do
+    # Get the layout of the focused container from the i3 tree
     layout=$(i3-msg -t get_tree | jq -r 'recurse(.nodes[]; .nodes != null) | select(.nodes[].focused).layout')
+    # Update the split direction if the layout is either "splitv" or "splith"
     if [[ $layout =~ ^(splitv|splith)$ ]]; then
         update_split
     fi
 done < <(xprop -spy -root _NET_ACTIVE_WINDOW)
 
+# Handle interrupt and terminate signals
 trap 'log "Received signal, exiting"; exit' INT TERM
