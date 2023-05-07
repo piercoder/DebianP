@@ -1,4 +1,15 @@
 #!/bin/bash
+#======================================================================#
+#    __     ___  __      __   __   __   ___  __
+#   |__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#   |    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#   Autotile i3 windows based on their aspect ratio.
+#   This is a revised version of a script originally created by 
+#   gytis-ivaskevicius, designed to automatically tile i3 windows
+#   based on their aspect ratio. The script was first discussed on 
+#   the i3 GitHub issue tracker (#4253).
+#======================================================================#
 
 # Regular expression to match the aspect ratio of a window
 readonly ASPECT_RATIO_REGEX='([0-9]+)x([0-9]+)'
