@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Define the regular expression to match the output of 'xdotool getwindowfocus getwindowgeometry'
+readonly ASPECT_RATIO_REGEX='([0-9]+)x([0-9]+)'
+
+# Define the split direction for wide windows
+readonly SPLIT_DIRECTION='h'
+
+# Define the log file path
+readonly LOG_FILE='/var/log/i3-window-split.log'
+
+# Define the log function to append messages to the log file with a timestamp
+log() {
+    echo "$(date +'%Y-%m-%d %H:%M:%S') $*" >> "$LOG_FILE"
+}
+
+# Define the function to update the split direction based on the aspect ratio of the focused window
+update_split() {
+    # Get the geometry of the currently focused window
+    if ! output=$(xdotool getwindowfocus getwindowgeometry); then
+        log "Failed to get window geometry"
+        return 1
+    fi
+
+    # If the output matches the regular expression, extract the width and height
+    if [[ $output =~ $ASPECT_RATIO_REGEX ]]; then
+        declare -r window_width="${BASH_REMATCH[1]}"
+        declare -r window_height="${BASH_REMATCH[2]}"
+        
+        # Determine whether to split horizontally or vertically based on the aspect ratio
+        if ((window_width > window_height)); then 
+            i3-msg "split $SPLIT_DIRECTION" || log "Failed to split $SPLIT_DIRECTION"
+        else
+            i3-msg 'split v' || log 'Failed to split vertically'
+        fi
+    fi
+}
+
+# Check if i3 is running
+if ! pidof i3 >/dev/null; then
+    log 'i3 is not running, exiting'
+    exit 1
+fi
+
+# Start a loop to monitor the active window
+while read -r line; do
+    # Get the layout of the currently focused container in i3
+    if ! layout=$(i3-msg -t get_tree | jq -r 'recurse(.nodes[]; .nodes != null) | select(.nodes[].focused).layout'); then
+        log 'Failed to get i3 layout'
+        continue
+    fi
+
+    # If the layout is a split layout, call the 'update_split' function to adjust the split direction
+    if [[ "$layout" =~ ^(splitv|splith)$ ]]; then
+        update_split
+    fi
+done < <(xprop -spy -root _NET_ACTIVE_WINDOW)
+
+# Define the trap to catch SIGINT and SIGTERM signals and exit gracefully
+trap 'log "Received signal, exiting"; exit' INT TERM

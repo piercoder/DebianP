@@ -82,7 +82,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
 # Autotiling
-exec_always --no-startup-id ~/.config/i3/i3bin/altlayout
+exec_always --no-startup-id ~/.config/i3/i3bin/autotiling
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
