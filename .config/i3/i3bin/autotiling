@@ -20,7 +20,7 @@ update_split() {
             fi
         fi
     else
-        log 'Failed to get window geometry'
+        log "Failed to get window geometry"
     fi
 }
 
@@ -30,8 +30,8 @@ if ! pidof i3 >/dev/null; then
 fi
 
 while read -r _; do
-    layout=$(i3-msg -t get_tree | awk -F'"' '/focused/ {f=$4} /layout/ && f {l=$4} END {print l}' RS=,)
-    if [[ $layout == 'splith' || $layout == 'splitv' ]]; then
+    layout=$(i3-msg -t get_tree | jq -r 'recurse(.nodes[]; .nodes != null) | select(.nodes[].focused).layout')
+    if [[ $layout =~ ^(splitv|splith)$ ]]; then
         update_split
     fi
 done < <(xprop -spy -root _NET_ACTIVE_WINDOW)
