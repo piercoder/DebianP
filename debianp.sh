@@ -68,7 +68,8 @@ echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
-sudo apt install -y man wget curl neofetch deborphan command-not-found tldr
+sudo apt install -y man wget curl neofetch deborphan command-not-found tldr htop xdotool jq
+
 echo "< System utitlities installed >"
 
 # Microcode for AMD/Intel
@@ -89,12 +90,6 @@ echo "< Window manager installed >"
 echo ""
 sudo apt install -y feh picom lxappearance
 echo "< Window manager utils installed >"
-
-# echo ""
-# sudo apt install -y pipx
-# pipx install i3altlayout
-# pipx ensurepath
-# echo "< Autotiling module installed >"
 
 echo ""
 sudo apt install -y lightdm slick-greeter lightdm-settings
