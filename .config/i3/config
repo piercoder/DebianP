@@ -18,8 +18,8 @@ set $mod Mod4
 set $term kitty
 set $browser google-chrome
 set $editor geany
-set $fileman thunar
-set $communic teams
+set $filemanager thunar
+set $messaging teams
 set $email thunderbird
 
 # Colors
@@ -203,10 +203,10 @@ bindsym $mod+b workspace $ws2; exec $browser
 bindsym $mod+e workspace $ws3; exec $editor
 
 # File manager
-bindsym $mod+f workspace $ws4; exec $fileman
+bindsym $mod+f workspace $ws4; exec $filemanager
 
 # Teams
-bindsym $mod+t workspace $ws5; exec $communic
+bindsym $mod+t workspace $ws5; exec $messaging
 
 # Email
 bindsym $mod+m workspace $ws6; exec $email
