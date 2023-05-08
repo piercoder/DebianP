@@ -237,6 +237,8 @@ alias ll='ls -alh --group-directories-first'
 alias aptup='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 
 alias gitup='git add . && git commit -m "Update: $(date)" && git push'
+
+alias dp='cd ~/DebianP'
 #----------------------------------------------------------------------#
 
 
@@ -249,5 +251,4 @@ alias gitup='git add . && git commit -m "Update: $(date)" && git push'
 
 eval "$(starship init bash)"
 
-# Created by `pipx` on 2023-05-06 09:14:04
-export PATH="$PATH:/home/pier/.local/bin"
+
