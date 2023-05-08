@@ -238,7 +238,7 @@ alias aptup='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 
 alias gitup='git add . && git commit -m "Update: $(date)" && git push'
 
-alias dp='cd ~/DebianP'
+alias dp='cd $HOME/DebianP'
 #----------------------------------------------------------------------#
 
 
