@@ -108,7 +108,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id nm-applet
 
 # Keyboard layout switch
-exec --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle' -layout us,it"
+exec --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle' -layout it,us"
 #======================================================================#
 
 
