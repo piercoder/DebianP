@@ -232,7 +232,8 @@ fi
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown -h now'
 
-alias ll='ls -alh --group-directories-first'
+#alias ll='ls -alh --group-directories-first'
+alias ll='exa -alh --icons --group-directories-first'
 
 alias aptup='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 
