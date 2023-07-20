@@ -10,3 +10,4 @@ font="FontAwesome-15"
 
 # Theme
 theme="-l $lines -nf $neutral -nb $dark -sb $accent -sf $light -fn $font"
+themel="-b -nf $neutral -nb $dark -sb $accent -sf $light -fn $font"

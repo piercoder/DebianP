@@ -18,7 +18,7 @@ o2="    Reboot"
 o3="    Poweroff" 
 
 # Power-off menu
-OPT=$(echo -e "$o1\n$o2\n$o3" | dmenu -i -p "Power menu ▶" $theme )
+OPT=$(echo -e "$o1\n$o2\n$o3" | dmenu -i -p "Power menu ▶" $themel)
 
 case $OPT in
 	$o1) i3-msg exit ;;
