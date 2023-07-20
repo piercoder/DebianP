@@ -69,7 +69,7 @@ echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
 sudo apt install -y man wget curl neofetch deborphan command-not-found tldr htop
-xdotool jq bat exa nala
+xdotool jq bat exa nala gpm
 
 echo "< System utitlities installed >"
 
