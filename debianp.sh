@@ -68,7 +68,7 @@ echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
-sudo apt install -y man wget curl neofetch deborphan command-not-found tldr htop xdotool jq bat exa nala gpm
+sudo apt install -y man wget curl neofetch deborphan command-not-found tldr htop xdotool jq bat exa nala gpm unzip
 
 echo "< System utitlities installed >"
 
@@ -154,6 +154,14 @@ echo ""
 mkdir -p ~/.wallpapers
 cp bg.jpg ~/.wallpapers
 echo "< Wallpapers installed >"
+
+echo ""
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
+mkdir -p ~/.local/share/fonts
+mv FiraCode.zip  ~/.local/share/fonts
+cd ~/.local/share/fonts
+unzip FiraCode.zip
+cd ~/DebianP/
 
 echo ""
 curl -sS https://starship.rs/install.sh | sh
