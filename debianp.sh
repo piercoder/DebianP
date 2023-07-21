@@ -100,7 +100,7 @@ sudo apt install -y flameshot diodon network-manager-gnome pasystray
 echo "< System-tray applets installed >"
 
 echo ""
-sudo apt install -y xfce4-power-manager
+sudo apt install -y xfce4-power-manager cbatticon
 echo "< Power manager installed >"
 
 echo ""
