@@ -262,7 +262,7 @@ bar {
 			separator $neutral
 
 								# border background text
-			focused_workspace	$neutral $neutral $dark			
+			focused_workspace	$accent $accent $light			
 			active_workspace	$neutral $neutral $accent	
 			inactive_workspace	$dark $dark $neutral
 			urgent_workspace	$neutral $neutral $light	
