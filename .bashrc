@@ -233,7 +233,7 @@ alias reboot='sudo reboot'
 alias shutdown='sudo shutdown -h now'
 
 #alias ll='ls -alh --group-directories-first'
-alias ll='exa -alh --icons --git --group-directories-first'
+alias ll='exa -alhg --icons --git --group-directories-first'
 alias cat='batcat' 
 
 alias aptup='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
