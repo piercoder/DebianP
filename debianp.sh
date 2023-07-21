@@ -6,8 +6,7 @@
 #   |    | |___ |  \    \__, \__/ |__/ |___ |  \
 #
 #   My Debian i3 post installation script.
-#   Install packages after installing base Debian with no GUI.
-#   Or after base Debian XFCE installation.
+#   Run after a minimal install.
 #======================================================================#
 
 #----------------------------------------------------------------------#
@@ -43,14 +42,6 @@ echo ""
 echo "------------------------"
 echo "1 - Upgrading the system"
 echo "------------------------"
-## if you started from the xfce installation, uninstall unneeded packages to use alternatives instead
-echo ""
-sudo apt purge -y xfce4-goodies xfce4-notifyd xfce4-terminal xsane cups*
-sudo apt purge -y libreoffice* firefox-esr* exfalso gimp* mousepad sane*
-sudo apt purge -y gnome-accessibility-themes lynx* synaptic vim*
-clean
-echo "< Unneded packages uninstalled >"
-
 echo ""
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo cp sources.list /etc/apt/sources.list
@@ -68,7 +59,8 @@ echo "--------------------------------------"
 echo "2 - Installing the desktop environment"
 echo "--------------------------------------"
 echo ""
-sudo apt install -y man wget curl neofetch deborphan command-not-found tldr htop xdotool jq bat exa nala gpm unzip
+sudo apt install -y man wget curl neofetch deborphan command-not-found tldr \
+    htop xdotool jq bat exa nala gpm unzip
 
 echo "< System utitlities installed >"
 
@@ -79,9 +71,9 @@ sudo apt install -y intel-microcode
 echo "< Microcode installed>"
 
 # Nvidia drivers
-echo ""
+# echo ""
 # sudo apt install -y nvidia-driver
-echo "< Nvidia drivers installed >"
+# echo "< Nvidia drivers installed >"
 
 echo ""
 sudo apt install -y i3
@@ -165,7 +157,7 @@ cd ~/DebianP/
 
 echo ""
 curl -sS https://starship.rs/install.sh | sh
-echo "< Starshipt prompt installed >"
+echo "< Starship prompt installed >"
 
 echo ""
 mkdir -p ~/.config/
