@@ -15,7 +15,7 @@
 readonly ASPECT_RATIO_REGEX='([0-9]+)x([0-9]+)'
 
 # Log file path for error messages
-readonly LOG_FILE='/var/log/autotiling.log'
+readonly LOG_FILE="$HOME/autotiling.log"
 
 # Function to log messages to the log file
 log() {
