@@ -116,11 +116,6 @@ sudo apt install -y vim geany geany-common geany-plugin-git-changebar geany-plug
 echo "< Text editor installed >"
 
 echo ""
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-echo "< Neovim package manager installed >"
-
-echo ""
 wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./chrome.deb
 rm chrome.deb
