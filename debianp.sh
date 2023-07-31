@@ -112,7 +112,7 @@ sudo apt install -y thunar gvfs-backends gvfs-fuse
 echo "< File manager installed >"
 
 echo ""
-sudo apt install -y neovim geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck
+sudo apt install -y vim geany geany-common geany-plugin-git-changebar geany-plugin-spellcheck
 echo "< Text editor installed >"
 
 echo ""
@@ -163,8 +163,7 @@ echo ""
 mkdir -p ~/.config/
 ln -sf ~/DebianP/.config/* ~/.config/
 ln -sf ~/DebianP/.config/.picom.conf ~/.config/
-mkdir -p ~/.config/nvim
-ln -sf ~/DebianP/init.vim ~/.config/nvim/
+ln -sf ~/DebianP/.vimrc ~/
 rm ~/.bashrc
 ln -sf ~/DebianP/.bashrc ~/
 echo "< Configuration files copied >"

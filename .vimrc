@@ -1,12 +1,24 @@
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 " Loading plugins 
-call plug#begin('~/.config/nvim/plugged')   " specify plugin directory
-Plug 'navarasu/onedark.nvim'                " color scheme
+call plug#begin('~/.vim/plugged')   	    " specify plugin directory
+Plug 'sainnhe/sonokai'                      " color scheme
 Plug 'ap/vim-css-color'                     " color code plugin
 Plug 'Raimondi/delimitMate'                 " automatic closing of quotes, parenthesis, brackets, etc
 Plug 'gabrielelana/vim-markdown'            " markdown syntax
-Plug 'SirVer/ultisnips'                     " snippet engine
 Plug 'honza/vim-snippets'                   " snippets
 Plug 'airblade/vim-gitgutter'               " git version control system
+Plug 'tpope/vim-eunuch'                     " sudo and unix command
+Plug 'itchyny/lightline.vim'                " nice status line
 call plug#end()
 
 " Settings
@@ -28,12 +40,7 @@ set softtabstop=4                           " see multiple spaces as tab-stops s
 set shiftwidth=4                            " width for auto-indents
 set wrap                                    " allow line wrapping
 set linebreak                               " avoid wrapping a line in the middle of a word.
-set spell spelllang=en_us                   " spell check
+set spell spelllang=en_us,it                " spell check
+set laststatus=2                            " status line
 set background=dark 
-colorscheme onedark
-
-" Ultisnip
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
+colorscheme sonokai
