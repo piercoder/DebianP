@@ -41,10 +41,10 @@ update_split() {
 }
 
 # Check if i3 is running
-if ! pidof i3 >/dev/null; then
-    log 'i3 is not running, exiting'
-    exit 1
-fi
+# if ! pidof i3 >/dev/null; then
+#    log 'i3 is not running, exiting'
+#    exit 1
+# fi
 
 # Monitor changes in the active window and update the split direction if necessary
 while read -r _; do
