@@ -223,8 +223,8 @@ bindsym $mod+x exec ~/.config/i3/dmenubin/tmenu
 # dmenu (power menu)
 bindsym $mod+Shift+q exec ~/.config/i3/dmenubin/powermenu
 
-# dmenu (window-cycle menu)
-bindsym $mod+Tab exec ~/.config/i3/dmenubin/cyclemenu
+# dmenu (window-switcher menu)
+bindsym $mod+Tab exec ~/.config/i3/dmenubin/wswitcher
 
 # Screenshot
 bindsym $mod+Print exec flameshot gui

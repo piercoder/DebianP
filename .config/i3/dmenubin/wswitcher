@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#======================================================================#
+#	 __     ___  __      __   __   __   ___  __
+#	|__) | |__  |__)    /  ` /  \ |  \ |__  |__)
+#	|    | |___ |  \    \__, \__/ |__/ |___ |  \
+#
+#	dmenu window switcher
+#======================================================================#
+
+# Theme
+source $(dirname "$0")/style
+    
+# List all windows and their titles
+windows=$(wmctrl -l | awk '{$1=$2=$3=""; print substr($0, index($0,$4))}')
+
+# Prompt the user to select a window using dmenu
+selected_window=$(echo "$windows" | dmenu -i -p "Jump to an application ▶" $themel)
+
+# If the user has selected a window
+if [[ -n "$selected_window" ]]; then
+    # Find the window ID of the selected window
+    window_id=$(wmctrl -l | awk -v selected="$selected_window" '$0 ~ selected {print $1; exit}')
+
+    # If a window ID was found
+    if [[ -n "$window_id" ]]; then
+        # Switch to the selected window
+        wmctrl -ia "$window_id"
+    else
+        echo "No window found for '$selected_window'"
+    fi
+else
+    echo "No window selected"
+fi
